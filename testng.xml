@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true"
+          name="C:/Users/sunlongyu/Desktop/java/maven_project/src/main/java/com/testfan/StudentManagerSystem">
+<!--        <groups>-->
+<!--           <run>-->
+<!--                   <include name="login"/>-->
+<!--           </run>-->
+<!--       </groups>-->
+       <classes>
+           <class name="com.testfan.StudentManagerSystem.LoginTest">
+<!--              <methods>-->
+<!--                   <include name="loginCorrect"/>-->
+<!--                   <include name="loginUsernameError"/>-->
+<!--                   <include name="loginPwdError"/>-->
+<!--                   <include name="add"/>-->
+<!--                   <include name="addStu"/>-->
+<!--               </methods>-->
+            </class>
+            <class name="com.testfan.testngstudy.StudyTest1">
+            </class>
+        </classes>
+    </test>
+</suite>
