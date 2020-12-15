@@ -16,21 +16,26 @@ public class StuManager {
         String name = scanner.next();
         System.out.println("请输入密码：");
         String password = scanner.next();
+        // 判断用户名或者密码是否正确，如果正确则进入学员管理系统
         if(Login.login(name,password)){
             System.out.println("==========================欢迎登录学生管理系统=============================");
+
             int i=1;
             while (i>0){
+
+                // 定义操作规范
                 System.out.println("1:新增，2:查询，3:修改，4:删除，5:显示所有，6:退出，请输入你的操作：");
-                int op = scanner.nextInt();
+                int op = scanner.nextInt();// 控制台接受输入的数字，进行判断
                 switch (op){
                     case 1:
                         System.out.println("请输入学员姓名：");
                         String stuName = scanner.next();
                         System.out.println("请输入学员手机号：");
                         long stuPhone = scanner.nextLong();
-                        StuDB.add(stuName,stuPhone);
+
+                        StuDB.add(stuName,stuPhone);// 新增用户
                         break;
-                    case 2:
+                    case 2://
                         System.out.println("请输入学员手机号：");
                         long stuPhone1 = scanner.nextLong();
                         StuDB.select(stuPhone1);
@@ -65,6 +70,7 @@ public class StuManager {
             }
 
         }
+        //如果用户名或者密码错误，则登录失败
         else {
             System.out.println("请重新输入");
         }

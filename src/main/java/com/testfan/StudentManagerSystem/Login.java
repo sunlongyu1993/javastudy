@@ -5,6 +5,7 @@ package com.testfan.StudentManagerSystem;
  * @version 20201105
  */
 public class Login {
+    // 判断登录是否成功
     public static boolean login(String name, String password){
         if(name.equalsIgnoreCase("sly")&& password.equalsIgnoreCase("123456")){
             System.out.println("登录成功");

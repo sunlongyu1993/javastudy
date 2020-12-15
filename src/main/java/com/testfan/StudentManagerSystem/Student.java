@@ -5,18 +5,19 @@ package com.testfan.StudentManagerSystem;
  * @version 20201026
  */
 public class Student {
-    String name;
-    int age;
-    String wx;
-    String qq;
-    Long phone;
+    public String name;
+    public int age;
+    public String wx;
+    public String qq;
+    public Long phone;
 
-    public Student(){}
+    //public Student(){}
+    // 通过构造方法，来初始化 姓名和手机号
     public Student(String name,  Long phone) {
         this.name = name;
         this.phone = phone;
     }
-
+    // 方便获取以及修改属性，可以快捷键生成
     public String getName() {
         return name;
     }
@@ -34,6 +35,7 @@ public class Student {
     }
 
     public String getWx() {
+        //如果微信为null，赋值为空字符串
         if(wx == null){
             wx="";
         }
@@ -62,9 +64,15 @@ public class Student {
     public void setPhone(Long phone) {
         this.phone = phone;
     }
+    // 打印学员的所有信息
     public void showInfo(){
         System.out.println(this.getName()+" "+this.getPhone()+" "+this.getAge()+" "+this.getQq()+" "+this.getWx());
     }
 
-
+    public static void main(String[] args) {
+//        Student stu = new Student("sly1",18810677206L);
+//        System.out.println(stu.getName());
+//        stu.setWx("111222");
+//        System.out.println(stu.getWx());
+    }
 }
