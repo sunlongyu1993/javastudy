@@ -3,23 +3,23 @@
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true"
           name="C:/Users/sunlongyu/Desktop/java/maven_project/src/main/java/com/testfan/StudentManagerSystem">
-<!--        <groups>-->
-<!--           <run>-->
-<!--                   <include name="login"/>-->
-<!--           </run>-->
-<!--       </groups>-->
+        <groups>
+           <run>
+                   <include name="login"/>
+           </run>
+       </groups>
+<!--   执行2个测试类：包名.类名-->
        <classes>
-           <class name="com.testfan.StudentManagerSystem.LoginTest">
-<!--              <methods>-->
+           <class name="com.testfan.testngstudy.LoginTest">
+              <methods>
 <!--                   <include name="loginCorrect"/>-->
 <!--                   <include name="loginUsernameError"/>-->
 <!--                   <include name="loginPwdError"/>-->
 <!--                   <include name="add"/>-->
 <!--                   <include name="addStu"/>-->
-<!--               </methods>-->
+               </methods>
             </class>
-            <class name="com.testfan.testngstudy.StudyTest1">
-            </class>
+<!--            <class name="com.testfan.testngstudy.StudyTest1"></class>-->
         </classes>
     </test>
 </suite>

@@ -1,5 +1,8 @@
-package com.testfan.StudentManagerSystem;
+package com.testfan.testngstudy;
 
+import com.testfan.StudentManagerSystem.Login;
+import com.testfan.StudentManagerSystem.StuDB;
+import com.testfan.StudentManagerSystem.Student;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -13,7 +16,7 @@ public class LoginTest {
     public void loginCorrect(){
         boolean flag = Login.login("sly", "123456");
         Assert.assertTrue(flag);
-        Assert.fail("强制失败");
+//        Assert.fail("强制失败");
     }
     // 用户名错误
     @Test(groups = "login")
@@ -37,7 +40,6 @@ public class LoginTest {
 //        Assert.assertEquals(sum,31);
     }
     @Test(dependsOnMethods = "loginCorrect")
-//    @Test
     public void addStu(){
         StuDB.add("sly1",18810677210L);
         Student student = StuDB.stuMap.get(18810677210L);

@@ -21,7 +21,7 @@ public class StuManager {
             System.out.println("==========================欢迎登录学生管理系统=============================");
 
             int i=1;
-            while (i>0){
+            while (i>0){//循环，保证项目一直运行
 
                 // 定义操作规范
                 System.out.println("1:新增，2:查询，3:修改，4:删除，5:显示所有，6:退出，请输入你的操作：");
@@ -35,19 +35,21 @@ public class StuManager {
 
                         StuDB.add(stuName,stuPhone);// 新增用户
                         break;
-                    case 2://
+                    case 2://查询用户
                         System.out.println("请输入学员手机号：");
                         long stuPhone1 = scanner.nextLong();
+
                         StuDB.select(stuPhone1);
                         break;
                     case 3:
-                        //修改
+                        //修改学员信息
                         System.out.println("请输入学员手机号：");
                         long stuPhone2 = scanner.nextLong();
                         System.out.println("请输入需要修改学员的属性（name,age,qq,wx,phone）：");
                         String stuAtt = scanner.next();
                         System.out.println("请输入需要修改学员的属性的值：");
                         String stuValue = scanner.next();
+
                         StuDB.change(stuPhone2,stuAtt,stuValue);
                         break;
                     case 4:
