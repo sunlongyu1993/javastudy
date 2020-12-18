@@ -10,6 +10,8 @@ public class Student {
     public String wx;
     public String qq;
     public Long phone;
+    public Float score;
+
 
     //public Student(){}
     // 通过构造方法，来初始化 姓名和手机号
@@ -17,6 +19,16 @@ public class Student {
         this.name = name;
         this.phone = phone;
     }
+
+    public Float getScore() {
+        return score;
+    }
+
+    public void setScore(Float score) {
+        this.score = score;
+    }
+
+
     // 方便获取以及修改属性，可以快捷键生成
     public String getName() {
         return name;

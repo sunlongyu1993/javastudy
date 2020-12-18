@@ -6,6 +6,7 @@ import org.testng.annotations.Test;
  * @author 孙珑瑜
  * @version 20201116
  */
+// 执行顺序：根据ascall 顺序来执行
 public class StudyTest1 {
     @Test//(priority = 1)
     public void test001_f(){

@@ -97,6 +97,16 @@ public class StuDB {
             student.showInfo();
         }
     }
+    // 求学员的平均分
+    public static float avgScore(){
+        Collection<Student> students = stuMap.values();
+        float sum = 0;
+        for (Student student :students) {
+            sum += student.getScore();
+        }
+        return   sum /stuMap.size();
+    }
+
     public static void main(String[] args) {
 //        Student stu1 = new Student("sly1",18810677206L);
 //        stuMap.put(18810677206L,stu1);
