@@ -10,21 +10,22 @@ public class Student {
     public String wx;
     public String qq;
     public Long phone;
-    public Float score;
+    public double score;
 
 
     //public Student(){}
     // 通过构造方法，来初始化 姓名和手机号
-    public Student(String name,  Long phone) {
+    public Student(String name,  long phone,double score) {
         this.name = name;
         this.phone = phone;
+        this.score = score;
     }
 
-    public Float getScore() {
+    public double getScore() {
         return score;
     }
 
-    public void setScore(Float score) {
+    public void setScore(double score) {
         this.score = score;
     }
 
@@ -78,7 +79,7 @@ public class Student {
     }
     // 打印学员的所有信息
     public void showInfo(){
-        System.out.println(this.getName()+" "+this.getPhone()+" "+this.getAge()+" "+this.getQq()+" "+this.getWx());
+        System.out.println(this.getName()+" "+this.getPhone()+" "+this.getScore()+" "+this.getAge()+" "+this.getQq()+" "+this.getWx());
     }
 
     public static void main(String[] args) {

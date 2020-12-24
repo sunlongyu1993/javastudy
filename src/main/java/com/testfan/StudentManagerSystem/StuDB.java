@@ -15,14 +15,16 @@ public class StuDB {
 
     //封装添加学员方法
     //需要的信息：手机号以及学员
-    public static void add(String name,long phone){
+    public static boolean add(String name,long phone,double score){
         // 判重复：判断添加的手机号是否存在
         if(!stuMap.containsKey(phone)){
-            Student stu1 = new Student(name,phone);
+            Student stu1 = new Student(name,phone,score);
             stuMap.put(phone,stu1);
+            return true;
         }
         else {
             System.out.println(phone+"已存在,请判断输入的手机号是否正确");
+            return false;
         }
     }
     //封装删除方法
@@ -97,10 +99,10 @@ public class StuDB {
             student.showInfo();
         }
     }
-    // 求学员的平均分
-    public static float avgScore(){
+    // 求全班学员的平均分
+    public static double avgScore(){
         Collection<Student> students = stuMap.values();
-        float sum = 0;
+        double sum = 0;
         for (Student student :students) {
             sum += student.getScore();
         }

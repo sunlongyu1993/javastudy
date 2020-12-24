@@ -24,7 +24,7 @@ public class StuManager {
             while (i>0){//循环，保证项目一直运行
 
                 // 定义操作规范
-                System.out.println("1:新增，2:查询，3:修改，4:删除，5:显示所有，6:退出，请输入你的操作：");
+                System.out.println("1:新增，2:查询，3:修改，4:删除，5:显示所有，6:退出，7:求全班平均分；请输入你的操作：");
                 int op = scanner.nextInt();// 控制台接受输入的数字，进行判断
                 switch (op){
                     case 1:
@@ -32,8 +32,10 @@ public class StuManager {
                         String stuName = scanner.next();
                         System.out.println("请输入学员手机号：");
                         long stuPhone = scanner.nextLong();
+                        System.out.println("请输入学员成绩：");
+                        double score = scanner.nextDouble();
 
-                        StuDB.add(stuName,stuPhone);// 新增用户
+                        StuDB.add(stuName,stuPhone,score);// 新增用户
                         break;
                     case 2://查询用户
                         System.out.println("请输入学员手机号：");
@@ -65,6 +67,9 @@ public class StuManager {
                     case 6:
                         i =-1;
                         System.out.println("退出系统");
+                        break;
+                    case 7:
+                        StuDB.avgScore();
                         break;
                     default:
                         break;
