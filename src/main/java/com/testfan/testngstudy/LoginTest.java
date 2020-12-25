@@ -41,9 +41,15 @@ public class LoginTest {
     }
     @Test(dependsOnMethods = "loginCorrect")
     public void addStu(){
-        StuDB.add("sly1",18810677210L);
+        StuDB.add("sly1", 18810677210L, 50);
         Student student = StuDB.stuMap.get(18810677210L);
         Assert.assertNotNull(student);
+    }
+    @Test(dependsOnMethods = "addStu")
+    public void addStuAlread(){
+        boolean flag = StuDB.add("sly1", 18810677210L, 50);
+//        Student student = StuDB.stuMap.get(18810677210L);
+        Assert.assertFalse(flag);
     }
 
 }

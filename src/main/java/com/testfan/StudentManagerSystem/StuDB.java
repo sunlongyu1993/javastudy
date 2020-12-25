@@ -29,13 +29,15 @@ public class StuDB {
     }
     //封装删除方法
     // 按照手机号来进行删除
-    public static void delete(long phone){
+    public static boolean delete(long phone){
         // 判断手机号是否存在
         if(stuMap.containsKey(phone)){
             stuMap.remove(phone);
+            return true;
         }
         else {
             System.out.println(phone+"不存在,请判断输入的手机号是否正确");
+            return false;
         }
     }
 
