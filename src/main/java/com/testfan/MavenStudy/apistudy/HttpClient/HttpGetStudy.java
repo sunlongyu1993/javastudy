@@ -1,4 +1,4 @@
-package com.testfan.MavenStudy.apistudy;
+package com.testfan.MavenStudy.apistudy.HttpClient;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.client.methods.CloseableHttpResponse;
@@ -8,9 +8,6 @@ import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import sun.net.www.http.HttpClient;
-
-import java.io.Closeable;
 import java.io.IOException;
 
 /**
@@ -38,7 +35,6 @@ public class HttpGetStudy {
         Assert.assertTrue(res.contains("码同学"));
 
         System.out.println(res);
-//        System.out.println(statusCode);
     }
     @Test
     public void Get_getSku() throws IOException {

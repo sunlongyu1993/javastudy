@@ -1,4 +1,4 @@
-package com.testfan.MavenStudy.apistudy;
+package com.testfan.MavenStudy.apistudy.HttpClient;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.NameValuePair;
@@ -41,7 +41,7 @@ public class HttpPostStudy {
         HttpEntity entity = new UrlEncodedFormEntity(params);//将参数转化为表单类型的entity对象
         httpPost.setEntity(entity);
 
-        //使用httpclient httpPost 请求
+        //执行httpclient httpPost 请求
         CloseableHttpResponse response = httpClient.execute(httpPost);
 
         // 获取返回值中的状态码
@@ -56,7 +56,7 @@ public class HttpPostStudy {
         System.out.println(res);
     }
 
-    @Test// json的post 接口
+    @Test// 入参是json类型的的post 接口
     public void Post_Json() throws IOException {
         CloseableHttpClient httpClient = HttpClients.createDefault();
         HttpPost httpPost = new HttpPost("http://192.168.23.129:8080/pinter/com/register");
