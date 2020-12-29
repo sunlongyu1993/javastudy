@@ -30,7 +30,7 @@ public class CrmTest {
     String token;
 
     @Test
-    public void test001_login() throws IOException {
+    public void test001_login() throws Exception {
         HttpPost httpPost = new HttpPost("http://192.168.23.129:8090/login");
         NameValuePair username = new BasicNameValuePair("username", "admin");
         NameValuePair pwd = new BasicNameValuePair("password", "123456");
