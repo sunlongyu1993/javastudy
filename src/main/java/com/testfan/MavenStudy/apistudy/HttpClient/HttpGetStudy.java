@@ -16,7 +16,7 @@ import java.io.IOException;
  */
 public class HttpGetStudy {
     @Test
-    public void Get() throws IOException {
+    public void Get() throws Exception {
         // 创建一个客户端对象，相当于你的浏览器
         CloseableHttpClient httpClient = HttpClients.createDefault();
         // 创建一个get 对象
