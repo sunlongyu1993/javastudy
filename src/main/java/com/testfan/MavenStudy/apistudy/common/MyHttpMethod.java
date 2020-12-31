@@ -25,7 +25,7 @@ import java.util.*;
  * @author 孙珑瑜
  * @version 20201229
  */
-public class HttpMethod {
+public class MyHttpMethod {
     public static  CloseableHttpClient httpClient;// 创建一个http客户端对象，用来执行http 接口对象
     public static  HttpPost httpPost;//post 请求对象
     public static  HttpGet httpGet;//get 请求对象
