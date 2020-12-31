@@ -1,5 +1,6 @@
 package com.testfan.MavenStudy.apistudy.common;
 
+import org.apache.http.Header;
 import org.apache.http.HttpEntity;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
@@ -62,7 +63,7 @@ public class HttpMethod {
     }
 
     // 封装post：入参为表单类型的方法
-    public String PostForm(String url,Map<Object,Object> params,Map<Object,Object> headers) throws IOException {
+    public static String PostForm(String url,Map<Object,Object> params,Map<Object,Object> headers) throws IOException {
         httpPost = new HttpPost(url);
         //入参
         List<NameValuePair> paramlist= new ArrayList<>();
@@ -89,7 +90,7 @@ public class HttpMethod {
     }
 
     //封装post：入参为json或者xml类型的方法
-    public String PostJsonOrXml(String url,String params,Map<Object,Object> headers) throws IOException {
+    public static String PostJsonOrXml(String url,String params,Map<Object,Object> headers) throws IOException {
         HttpPost httpPost = new HttpPost(url);
         //设置参数
         // 将json/xml的字符串转化为一个entity 对象
@@ -111,6 +112,53 @@ public class HttpMethod {
 
         return resString;
     }
+
+    //封装上传文件的接口的封装
+    public static void upload(){
+
+    }
+
+    /**
+     * 获取响应信息中的响应状态码
+     * @return
+     */
+    public static int getStatusCode(){
+        int statusCode = response.getStatusLine().getStatusCode();
+        return statusCode;
+    }
+
+    /**
+     * 获取响应信息中的所有header
+     * @return
+     */
+    public static Header[] getAllHeaders(){
+        Header[] allHeaders = response.getAllHeaders();
+        return allHeaders;
+    }
+
+    /**
+     * 响应信息中的某一个header
+     * @param headername
+     * @return
+     */
+    public  static  Header[] getHeader(String headername){
+        Header[] header = response.getHeaders(headername);
+        return header;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     public static void main(String[] args) throws Exception {
         Map<Object,Object> param =new HashMap<>();
         param.put("id","1");
