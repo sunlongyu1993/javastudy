@@ -1,17 +1,19 @@
 package com.testfan.MavenStudy.apistudy.common;
 
 import org.apache.http.HttpEntity;
+import org.apache.http.NameValuePair;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
+import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
 
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 /**
  * @author 孙珑瑜
@@ -58,21 +60,57 @@ public class HttpMethod {
         String response = EntityUtils.toString(responseEntity,"utf-8");
         return response;
     }
+
     // 封装post：入参为表单类型的方法
-    //
-    public void PostForm(String url) throws IOException {
+    public String PostForm(String url,Map<Object,Object> params,Map<Object,Object> headers) throws IOException {
         httpPost = new HttpPost(url);
-
+        //入参
+        List<NameValuePair> paramlist= new ArrayList<>();
+        Set<Map.Entry<Object, Object>> entrySet = params.entrySet();
+        for (Map.Entry<Object, Object> entry:entrySet) {
+            System.out.println(entry.getKey()+":"+entry.getValue());
+            NameValuePair param = new BasicNameValuePair(entry.getKey().toString(),entry.getValue().toString());
+            paramlist.add(param);
+        }
+        //将paramsList对象转换成entity对象
+        HttpEntity entity = new UrlEncodedFormEntity(paramlist);
+        httpPost.setEntity(entity);
+        // header
+        Set<Map.Entry<Object, Object>> headersentry = headers.entrySet();
+        for (Map.Entry<Object, Object> header:headersentry) {
+            httpPost.setHeader(header.getKey().toString(),header.getValue().toString());
+        }
+        // 执行请求
         response = httpClient.execute(httpPost);
-
+        //解析响应对象中的响应内容
+        HttpEntity responseEntity = response.getEntity();//响应body体信息
+        String resString = EntityUtils.toString(responseEntity,"utf-8");//将entity对象转换成字符串
+        return resString;
     }
-//    //封装post：入参为json或者xml类型的方法
-//    public void PostJsonOrXml(String url) throws IOException {
-//        httpClient = HttpClients.createDefault();
-//
-//        HttpPost httpPost = new HttpPost(url);
-//        CloseableHttpResponse response = httpClient.execute(httpPost);
-//    }
+
+    //封装post：入参为json或者xml类型的方法
+    public String PostJsonOrXml(String url,String params,Map<Object,Object> headers) throws IOException {
+        HttpPost httpPost = new HttpPost(url);
+        //设置参数
+        // 将json/xml的字符串转化为一个entity 对象
+        HttpEntity entity = new StringEntity(params,"utf-8");
+        httpPost.setEntity(entity);
+
+        //header
+        Set<Map.Entry<Object, Object>> headersentrySet = headers.entrySet();
+        for (Map.Entry<Object, Object> entry:headersentrySet) {
+            System.out.println(entry.getKey()+":"+entry.getValue());
+            httpPost.setHeader(entry.getKey().toString(),entry.getValue().toString());
+        }
+
+        //执行请求
+        response = httpClient.execute(httpPost);
+        //解析响应对象中的响应内容
+        HttpEntity responseEntity = response.getEntity();//响应body
+        String resString = EntityUtils.toString(responseEntity);//将entity对象转换成字符串
+
+        return resString;
+    }
     public static void main(String[] args) throws Exception {
         Map<Object,Object> param =new HashMap<>();
         param.put("id","1");
