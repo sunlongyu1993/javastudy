@@ -1,5 +1,6 @@
 package com.testfan.MavenStudy.apistudy.common;
 
+import org.apache.commons.io.FilenameUtils;
 import org.apache.http.Header;
 import org.apache.http.HttpEntity;
 import org.apache.http.NameValuePair;
@@ -7,12 +8,16 @@ import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.ContentType;
 import org.apache.http.entity.StringEntity;
+import org.apache.http.entity.mime.HttpMultipartMode;
+import org.apache.http.entity.mime.MultipartEntityBuilder;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.*;
 
@@ -113,8 +118,73 @@ public class HttpMethod {
         return resString;
     }
 
-    //封装上传文件的接口的封装
-    public static void upload(){
+    /***
+     *封装上传文件的接口
+     * @param url
+     * @param params
+     * @param headers
+     * @return
+     * @throws Exception
+     */
+    public static String upload(String url,Map<Object,Object> params,Map<Object,Object> headers) throws  Exception {
+        HttpPost httpPost = new HttpPost(url);
+        // header
+        Set<Map.Entry<Object, Object>> HeaderentrySet = headers.entrySet();
+        for (Map.Entry<Object, Object> entry :HeaderentrySet) {
+            System.out.println(entry.getKey()+":"+entry.getValue());
+            httpPost.setHeader(entry.getKey().toString(),entry.getValue().toString());
+        }
+
+        //参数
+        MultipartEntityBuilder builder = MultipartEntityBuilder.create().setMode(HttpMultipartMode.BROWSER_COMPATIBLE);
+        Set<Map.Entry<Object, Object>> entrySet = params.entrySet();
+        for (Map.Entry<Object, Object> entry :entrySet) {
+            System.out.println(entry.getKey()+":"+entry.getValue());
+            String  paramName = entry.getKey().toString();
+            String  paramValue = entry.getValue().toString();
+            if (!paramName.equals("file")){
+                builder.addTextBody(paramName,paramValue);
+            }
+            else {
+                File file = new File(paramValue);//因为value 是文件的全路径，所以需要定义一个file类型的
+                //根据文件路径得到文件名称 xxx.png
+                String filename = FilenameUtils.getName(paramValue);
+                //判断文件类型：用文件后缀来判断文件类型png
+                String filetype = FilenameUtils.getExtension(paramValue);
+                ContentType contentType = null;
+                switch (filetype){
+                    case "png":
+                        contentType=ContentType.IMAGE_PNG;
+                        break;
+                    case "jpeg":
+                        contentType=ContentType.IMAGE_JPEG;
+                        break;
+                    case "jpg":
+                        contentType=ContentType.IMAGE_JPEG;
+                        break;
+                    case "bmp":
+                        contentType=ContentType.IMAGE_BMP;
+                        break;
+                    case "gif":
+                        contentType=ContentType.IMAGE_GIF;
+                        break;
+                    case "txt":
+                        contentType=ContentType.DEFAULT_TEXT;
+                        break;
+                    default:
+                        break;
+                }
+                builder.addBinaryBody(paramName,file,contentType,filename);
+            }
+        }
+        HttpEntity entity = builder.build();
+        httpPost.setEntity(entity);
+
+        response = httpClient.execute(httpPost);
+        //解析响应对象中的响应内容
+        HttpEntity responseEntity = response.getEntity();//响应body体信息
+        String resString = EntityUtils.toString(responseEntity,"utf-8");//将entity对象转换成字符串
+        return resString;
 
     }
 
