@@ -1,5 +1,6 @@
 package com.testfan.MavenStudy.apistudy.common;
 
+import io.restassured.path.json.JsonPath;
 import org.apache.commons.io.FilenameUtils;
 import org.apache.http.Header;
 import org.apache.http.HttpEntity;
@@ -230,12 +231,14 @@ public class MyHttpMethod {
 
 
     public static void main(String[] args) throws Exception {
-        Map<Object,Object> param =new HashMap<>();
-        param.put("id","1");
-        Map<Object,Object> header =new HashMap<>();
-
-        String response = Get("http://192.168.23.129:8080/pinter/com/getSku", param, header);
-        System.out.println(response);
+//        Map<Object,Object> param =new HashMap<>();
+//        param.put("id","1");
+//        Map<Object,Object> header =new HashMap<>();
+//
+//        String response = Get("http://192.168.23.129:8080/pinter/com/getSku", param, header);
+//        System.out.println(response);
+        JsonPath from = JsonPath.from(new File("src/main/resources/crmparams/addCustomer.json"));
+        System.out.println(from.prettify());
     }
 
 }
