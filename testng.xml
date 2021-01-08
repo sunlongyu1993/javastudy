@@ -3,7 +3,10 @@
 
 <suite name="All Test Suite" parallel="tests" thread-count="2">
     <listeners>
+<!--        extentreport 的监听-->
         <listener class-name="com.testfan.MavenStudy.apistudy.listener.ExtentIReporterListenerUtil"></listener>
+<!--        reportng的监听-->
+        <listener class-name="org.uncommons.reportng.HTMLReporter" />
     </listeners>
     <test name="MyHttpclient">
         <classes>
