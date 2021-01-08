@@ -31,11 +31,18 @@ public class ExtentIReporterListenerUtil implements IReporter {
 
     private ExtentReports extent;
 
+    /**
+     *生成报告
+     * @param xmlSuites
+     * @param suites
+     * @param outputDirectory 生成报告的目录
+     */
     @Override
     public void generateReport(List<XmlSuite> xmlSuites, List<ISuite> suites, String outputDirectory)  {
         init();
         boolean createSuiteNode = false;
         if(suites.size()>1){
+            // 获取测试结果信息
             createSuiteNode=true;
         }
         for (ISuite suite : suites) {
@@ -44,7 +51,7 @@ public class ExtentIReporterListenerUtil implements IReporter {
             if(result.size()==0){
                 continue;
             }
-            //统计suite下的成功、失败、跳过的总用例数
+            //统计suite下的成功、失败、跳过的总用例数——将其转化成可以解析的结果
             int suiteFailSize=0;
             int suitePassSize=0;
             int suiteSkipSize=0;
@@ -107,7 +114,7 @@ public class ExtentIReporterListenerUtil implements IReporter {
 //            extent.setTestRunnerOutput(s);
 //        }
 
-        extent.flush();
+        extent.flush();//刷新一下，生成报告
 
         String REPORT_PATH="report/index.html";//读取report目录下的index.html文件
         Document html;
@@ -130,7 +137,7 @@ public class ExtentIReporterListenerUtil implements IReporter {
     }
 
     private void init() {
-        //文件夹不存在的话进行创建
+        //判断存在测试报告的文件夹是否存在，如果不存在的话进行创建
         File reportDir= new File(OUTPUT_FOLDER);
         if(!reportDir.exists()&& !reportDir .isDirectory()){
             reportDir.mkdir();
@@ -139,8 +146,8 @@ public class ExtentIReporterListenerUtil implements IReporter {
         // 设置静态文件的DNS
         //怎么样解决cdn.rawgit.com访问不了的情况
         htmlReporter.config().setResourceCDN(ResourceCDN.EXTENTREPORTS);
-        htmlReporter.config().setDocumentTitle("接口自动化测试报告");
-        htmlReporter.config().setReportName("接口自动化测试报告");
+        htmlReporter.config().setDocumentTitle("接口自动化测试报告");//报告title
+        htmlReporter.config().setReportName("接口自动化测试报告");//报告名称
         htmlReporter.config().setChartVisibilityOnOpen(true);
         htmlReporter.config().setTestViewChartLocation(ChartLocation.TOP);
         htmlReporter.config().setTheme(Theme.STANDARD);
@@ -173,26 +180,37 @@ public class ExtentIReporterListenerUtil implements IReporter {
                 }
             });
             treeSet.addAll(tests.getAllResults());
+            //测试用例名称的处理
+            //ITestResult 当前某一个测试用例的结果
+            //treeSet 是所有的测试结果
             for (ITestResult result : treeSet) {
+                // 获取测试用例的参数
+                //参数指的是：传入测试用例的 测试用例名称：String casename, 修改的路径：String path, 以及修改的值String value
                 Object[] parameters = result.getParameters();
                 String name="";
                 //如果有参数，则使用参数的toString组合代替报告中的name
 //                for(Object param:parameters){
 //                    name+=param.toString();
 //                }
-                if (parameters.length>0) {
-                    name=parameters[0].toString();
+                if (parameters.length>0) {//判断数组是否大于0，大于0则有参数
+                    name=parameters[0].toString();//将第一个参数赋值给name,作为测试报告上显示的测试用例名称
                 }
                 if(name.length()>0){
 //                	name=
 ////                    if(name.length()>50){
 ////                        name= name.substring(0,49)+"...";
 ////                    }
-                }else if (result.getMethod().getDescription()!=null) {
+
+                }// 如果方法的描述不为空,说明测试用例中的描述不为空
+                else if (result.getMethod().getDescription()!=null) {
+                    // 将测试用例中的描述赋值给name,作为测试报告上显示的测试用例名称
                     name=result.getMethod().getDescription();
-                }else {
+                }
+                else {
+                    // 如果上述都不满足，就获取测试用例中测试方法的名称，作为测试报告上显示的测试用例名称
                     name = result.getMethod().getMethodName();
                 }
+
                 if(extenttest==null){
                     test = extent.createTest(name);
                 }else{
