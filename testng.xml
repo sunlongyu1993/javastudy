@@ -2,46 +2,55 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
 <suite name="All Test Suite" parallel="tests" thread-count="2">
-    <test verbose="2" preserve-order="true"
-          name="C:/Users/sunlongyu/Desktop/java/maven_project/src/main/java/com/testfan/StudentManagerSystem">
-        <groups>
-           <run>
-                   <include name="login"/>
-           </run>
-       </groups>
-<!--   执行2个测试类：包名.类名-->
-       <classes>
-           <class name="com.testfan.testngstudy.LoginTest">
-              <methods>
-<!--                   <include name="loginCorrect"/>-->
-<!--                   <include name="loginUsernameError"/>-->
-<!--                   <include name="loginPwdError"/>-->
-<!--                   <include name="add"/>-->
-<!--                   <include name="addStu"/>-->
-               </methods>
+    <listeners>
+        <listener class-name="com.testfan.MavenStudy.apistudy.listener.ExtentIReporterListenerUtil"></listener>
+    </listeners>
+    <test name="MyHttpclient">
+        <classes>
+            <class name="com.testfan.MavenStudy.apistudy.HttpClient.CrmTestFZ">
             </class>
-<!--            <class name="com.testfan.testngstudy.StudyTest1"></class>-->
         </classes>
     </test>
-    <test verbose="2" preserve-order="true"
-          name="C:/Users/sunlongyu/Desktop/java/maven_project/src/main/java/com/testfan/StudentManagerSystem2">
-        <groups>
-           <run>
-                   <include name="login"/>
-           </run>
-       </groups>
-<!--   执行2个测试类：包名.类名-->
-       <classes>
-           <class name="com.testfan.testngstudy.LoginTest">
-              <methods>
-<!--                   <include name="loginCorrect"/>-->
-<!--                   <include name="loginUsernameError"/>-->
-<!--                   <include name="loginPwdError"/>-->
-<!--                   <include name="add"/>-->
-<!--                   <include name="addStu"/>-->
-               </methods>
-            </class>
-<!--            <class name="com.testfan.testngstudy.StudyTest1"></class>-->
-        </classes>
-    </test>
+<!--    <test verbose="2" preserve-order="true"-->
+<!--          name="C:/Users/sunlongyu/Desktop/java/maven_project/src/main/java/com/testfan/StudentManagerSystem">-->
+<!--        <groups>-->
+<!--           <run>-->
+<!--                   <include name="login"/>-->
+<!--           </run>-->
+<!--       </groups>-->
+<!--&lt;!&ndash;   执行2个测试类：包名.类名&ndash;&gt;-->
+<!--       <classes>-->
+<!--           <class name="com.testfan.testngstudy.LoginTest">-->
+<!--              <methods>-->
+<!--&lt;!&ndash;                   <include name="loginCorrect"/>&ndash;&gt;-->
+<!--&lt;!&ndash;                   <include name="loginUsernameError"/>&ndash;&gt;-->
+<!--&lt;!&ndash;                   <include name="loginPwdError"/>&ndash;&gt;-->
+<!--&lt;!&ndash;                   <include name="add"/>&ndash;&gt;-->
+<!--&lt;!&ndash;                   <include name="addStu"/>&ndash;&gt;-->
+<!--               </methods>-->
+<!--            </class>-->
+<!--&lt;!&ndash;            <class name="com.testfan.testngstudy.StudyTest1"></class>&ndash;&gt;-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test verbose="2" preserve-order="true"-->
+<!--          name="C:/Users/sunlongyu/Desktop/java/maven_project/src/main/java/com/testfan/StudentManagerSystem2">-->
+<!--        <groups>-->
+<!--           <run>-->
+<!--                   <include name="login"/>-->
+<!--           </run>-->
+<!--       </groups>-->
+<!--&lt;!&ndash;   执行2个测试类：包名.类名&ndash;&gt;-->
+<!--       <classes>-->
+<!--           <class name="com.testfan.testngstudy.LoginTest">-->
+<!--              <methods>-->
+<!--&lt;!&ndash;                   <include name="loginCorrect"/>&ndash;&gt;-->
+<!--&lt;!&ndash;                   <include name="loginUsernameError"/>&ndash;&gt;-->
+<!--&lt;!&ndash;                   <include name="loginPwdError"/>&ndash;&gt;-->
+<!--&lt;!&ndash;                   <include name="add"/>&ndash;&gt;-->
+<!--&lt;!&ndash;                   <include name="addStu"/>&ndash;&gt;-->
+<!--               </methods>-->
+<!--            </class>-->
+<!--&lt;!&ndash;            <class name="com.testfan.testngstudy.StudyTest1"></class>&ndash;&gt;-->
+<!--        </classes>-->
+<!--    </test>-->
 </suite>

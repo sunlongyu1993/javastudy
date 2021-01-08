@@ -1,4 +1,4 @@
-package com.testfan.utils;
+package com.testfan.MavenStudy.apistudy.utils;
 
 import java.io.File;
 import java.io.FileReader;
