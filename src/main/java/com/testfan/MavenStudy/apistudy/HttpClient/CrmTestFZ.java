@@ -53,7 +53,7 @@ public class CrmTestFZ {
         JsonPath from = JsonPath.from(new File("src/main/resources/crmparams/addCustomer.json"));
         String param = from.prettify();
         String response = MyHttpMethod.PostJsonOrXml(ip + "/CrmCustomer/addOrUpdate", param, header);
-        System.out.println(response);
+//        System.out.println(response);
         int statusCode = MyHttpMethod.getStatusCode();// http的响应状态码
         Assert.assertEquals(statusCode,200);
 

@@ -21,12 +21,16 @@ import org.apache.http.util.EntityUtils;
 import java.io.File;
 import java.io.IOException;
 import java.util.*;
+import java.util.logging.Logger;
+
+import static java.util.logging.Logger.*;
 
 /**
  * @author 孙珑瑜
  * @version 20201229
  */
 public class MyHttpMethod {
+    private static Logger logger= Logger.getLogger(String.valueOf(MyHttpMethod.class));
     public static  CloseableHttpClient httpClient;// 创建一个http客户端对象，用来执行http 接口对象
     public static  HttpPost httpPost;//post 请求对象
     public static  HttpGet httpGet;//get 请求对象
@@ -40,24 +44,28 @@ public class MyHttpMethod {
     // 封装get方法
     // 需要传入接口地址url,请求参数,以及headers信息
     public static String Get(String url, Map<Object,Object> params,Map<Object,Object> headers) throws Exception {
+        logger.info("拼接后的url:"+url);
         //1、给http 对象赋值，对应get请求，参数是？a=**&b=*** 拼接到url 之后
         // 2、解析传入的参数，将其转化为 aaa = bbb；
         StringBuffer param = new StringBuffer();
         Set<Map.Entry<Object, Object>> entries = params.entrySet();
         for ( Map.Entry<Object, Object> entry :entries) {
 //            System.out.println(entry.getKey()+":"+entry.getValue());
+            logger.info("参数:"+entry.getKey().toString()+"="+entry.getValue().toString());
             param.append("&"+entry.getKey()+"="+entry.getValue());
         }
 //        System.out.println(param);
         // 替换第一个& 为？
         String paramstr = param.toString().replaceFirst("&", "?");
+
 //        System.out.println(paramstr);
 //      将拼接好带参数的url 给http 对象赋值
-        HttpGet httpGet = new HttpGet(url+paramstr);
+        httpGet = new HttpGet(url+paramstr);
 //         3、循环遍历传入的header对象，将其添加到httpGet对象中
         Set<Map.Entry<Object, Object>> entryHeader = params.entrySet();
         for ( Map.Entry<Object, Object> entry :entryHeader) {
             httpGet.setHeader(entry.getKey().toString(),entry.getValue().toString());
+            logger.info("headers:"+entry.getKey().toString()+"="+entry.getValue().toString());
         }
         // 发起请求
         response = httpClient.execute(httpGet);
@@ -65,17 +73,21 @@ public class MyHttpMethod {
         HttpEntity responseEntity = response.getEntity();
         // 将responseEntity 对象转化为字符串
         String response = EntityUtils.toString(responseEntity,"utf-8");
+        logger.info("响应内容："+response);
         return response;
     }
 
     // 封装post：入参为表单类型的方法
     public static String PostForm(String url,Map<Object,Object> params,Map<Object,Object> headers) throws IOException {
+        logger.info("url:"+url);
+
         httpPost = new HttpPost(url);
         //入参
         List<NameValuePair> paramlist= new ArrayList<>();
         Set<Map.Entry<Object, Object>> entrySet = params.entrySet();
         for (Map.Entry<Object, Object> entry:entrySet) {
-            System.out.println(entry.getKey()+":"+entry.getValue());
+            logger.info("参数："+entry.getKey()+"="+entry.getValue());
+//            System.out.println(entry.getKey()+":"+entry.getValue());
             NameValuePair param = new BasicNameValuePair(entry.getKey().toString(),entry.getValue().toString());
             paramlist.add(param);
         }
@@ -85,6 +97,7 @@ public class MyHttpMethod {
         // header
         Set<Map.Entry<Object, Object>> headersentry = headers.entrySet();
         for (Map.Entry<Object, Object> header:headersentry) {
+            logger.info("headers："+header.getKey().toString()+"="+header.getValue().toString());
             httpPost.setHeader(header.getKey().toString(),header.getValue().toString());
         }
         // 执行请求
@@ -92,12 +105,14 @@ public class MyHttpMethod {
         //解析响应对象中的响应内容
         HttpEntity responseEntity = response.getEntity();//响应body体信息
         String resString = EntityUtils.toString(responseEntity,"utf-8");//将entity对象转换成字符串
+        logger.info("响应内容："+resString);
         return resString;
     }
 
     //封装post：入参为json或者xml类型的方法
     public static String PostJsonOrXml(String url,String params,Map<Object,Object> headers) throws IOException {
-        HttpPost httpPost = new HttpPost(url);
+        logger.info("url:"+url);
+        httpPost = new HttpPost(url);
         //设置参数
         // 将json/xml的字符串转化为一个entity 对象
         HttpEntity entity = new StringEntity(params,"utf-8");
@@ -106,7 +121,8 @@ public class MyHttpMethod {
         //header
         Set<Map.Entry<Object, Object>> headersentrySet = headers.entrySet();
         for (Map.Entry<Object, Object> entry:headersentrySet) {
-            System.out.println(entry.getKey()+":"+entry.getValue());
+//            System.out.println(entry.getKey()+":"+entry.getValue());
+            logger.info("headers:"+entry.getKey()+":"+entry.getValue());
             httpPost.setHeader(entry.getKey().toString(),entry.getValue().toString());
         }
 
@@ -115,6 +131,7 @@ public class MyHttpMethod {
         //解析响应对象中的响应内容
         HttpEntity responseEntity = response.getEntity();//响应body
         String resString = EntityUtils.toString(responseEntity);//将entity对象转换成字符串
+        logger.info("响应内容："+resString);
 
         return resString;
     }
@@ -128,6 +145,7 @@ public class MyHttpMethod {
      * @throws Exception
      */
     public static String upload(String url,Map<Object,Object> params,Map<Object,Object> headers) throws  Exception {
+        logger.info("url:"+url);
         HttpPost httpPost = new HttpPost(url);
         // header
         Set<Map.Entry<Object, Object>> HeaderentrySet = headers.entrySet();
@@ -140,7 +158,9 @@ public class MyHttpMethod {
         MultipartEntityBuilder builder = MultipartEntityBuilder.create().setMode(HttpMultipartMode.BROWSER_COMPATIBLE);
         Set<Map.Entry<Object, Object>> entrySet = params.entrySet();
         for (Map.Entry<Object, Object> entry :entrySet) {
-            System.out.println(entry.getKey()+":"+entry.getValue());
+            logger.info("参数:"+entry.getKey()+":"+entry.getValue());
+
+//            System.out.println(entry.getKey()+":"+entry.getValue());
             String  paramName = entry.getKey().toString();
             String  paramValue = entry.getValue().toString();
             if (!paramName.equals("file")){
@@ -185,6 +205,7 @@ public class MyHttpMethod {
         //解析响应对象中的响应内容
         HttpEntity responseEntity = response.getEntity();//响应body体信息
         String resString = EntityUtils.toString(responseEntity,"utf-8");//将entity对象转换成字符串
+        logger.info("响应内容："+resString);
         return resString;
 
     }
@@ -195,6 +216,7 @@ public class MyHttpMethod {
      */
     public static int getStatusCode(){
         int statusCode = response.getStatusLine().getStatusCode();
+        logger.info("响应状态码:"+statusCode);
         return statusCode;
     }
 

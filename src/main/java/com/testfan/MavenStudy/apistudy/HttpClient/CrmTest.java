@@ -80,6 +80,6 @@ public class CrmTest {
 
         HttpEntity resentity = response.getEntity();
         String res = EntityUtils.toString(resentity);
-        System.out.println(res);
+//        System.out.println(res);
     }
 }
