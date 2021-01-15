@@ -14,7 +14,7 @@ import static java.util.logging.Logger.*;
  */
 public class DButil {
     private static Connection conn;
-    private static Logger logger= Logger.getLogger(String.valueOf(DButil.class));
+//    private static Logger logger= Logger.getLogger(String.valueOf(DButil.class));
 
 
     /**
@@ -49,7 +49,6 @@ public class DButil {
                 if(dbvaule ==null){
                     dbvaule ="";
                 }
-
 //                System.out.println(columnLabel+"="+dbvaule.toString());
                 linemap.put(columnLabel,dbvaule);
             }

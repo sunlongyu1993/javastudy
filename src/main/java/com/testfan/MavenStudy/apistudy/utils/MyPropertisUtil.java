@@ -7,11 +7,31 @@ import java.util.Map;
 import java.util.Properties;
 import java.util.Set;
 
+
+
+
+
 /**
  * @author 孙珑瑜
  * @version 20210107
  */
 public class MyPropertisUtil {
+
+    /**
+     * 从配置文件中获取单独的某个字段
+     * @param filename
+     * @param key
+     * @return
+     * @throws Exception
+     */
+    public static String getProperty(String filename, String key) throws Exception {
+        Properties prop = new Properties();
+        prop.load(new FileReader(new File(filename)));
+        String property = prop.getProperty(key);
+        return property;
+
+    }
+
     /**
      * 优化读取properties文件内容的脚本
      * @return
@@ -28,6 +48,8 @@ public class MyPropertisUtil {
         return prama;
     }
 
+
+//调试脚本
     public static Map<String, Object> name() throws Exception {
         Properties properties= new Properties();
         //load 表示要加载一个流，new FileReader 读取某一个文件，

@@ -29,14 +29,19 @@ public class CrmTestFZ_dbassert {
     Map<Object,Object> header;
     String token;
 
-    String url ="jdbc:mysql://192.168.23.129:3306/crm?characterEncoding=utf8&useSSL=false&zeroDateTimeBehavior=convertToNull&tinyInt1isBit=false";
-    String dbusername = "root";
-    String dbpwd = "123456";
+
 
     @BeforeClass
-    public void init() throws SQLException {
+    public void init() throws Exception {
         ip = "http://192.168.23.129:8090";
         header = new HashMap<>();
+        // 从数据库中读取内容
+//        String url ="jdbc:mysql://192.168.23.129:3306/crm?characterEncoding=utf8&useSSL=false&zeroDateTimeBehavior=convertToNull&tinyInt1isBit=false";
+//        String dbusername = "root";
+//        String dbpwd = "123456";
+        String url = MyPropertisUtil.getProperty("src/main/resources/db.properties", "mtxcrm.jdbc.url");
+        String dbusername = MyPropertisUtil.getProperty("src/main/resources/db.properties", "mtxcrm.jdbc.user");
+        String dbpwd = MyPropertisUtil.getProperty("src/main/resources/db.properties", "mtxcrm.jdbc.pwd");
         DButil.getconn(url,dbusername,dbpwd);
     }
 
