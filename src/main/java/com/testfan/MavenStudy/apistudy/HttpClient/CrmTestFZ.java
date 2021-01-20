@@ -33,7 +33,7 @@ public class CrmTestFZ {
 //        Map<Object,Object> param =  param = new HashMap<>();
 //        param.put("username", "admin");
 //        param.put("password", "123456");
-        Map<Object, Object> param = MyPropertisUtil.getAll("src/main/resources/crmparams/crmlogin.properties");
+        Map<Object, Object> param = MyPropertisUtil.getAll("src/main/resources/crmparams/mtxreg.properties");
         String response = MyHttpMethod.PostForm(ip + "/login", param, header);
         int statusCode = MyHttpMethod.getStatusCode();
         Assert.assertEquals(statusCode,200);

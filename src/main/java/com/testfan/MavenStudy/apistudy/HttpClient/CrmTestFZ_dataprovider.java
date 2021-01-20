@@ -50,7 +50,7 @@ public class CrmTestFZ_dataprovider {
 
     @Test//登录
     public void test001_login() throws Exception {
-        Map<Object, Object> param = MyPropertisUtil.getAll("src/main/resources/crmparams/crmlogin.properties");
+        Map<Object, Object> param = MyPropertisUtil.getAll("src/main/resources/crmparams/mtxreg.properties");
 //        param.put("username","sly");
 
         String response = MyHttpMethod.PostForm(ip + "/login", param, header);

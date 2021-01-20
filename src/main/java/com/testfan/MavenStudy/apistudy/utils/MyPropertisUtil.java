@@ -53,7 +53,7 @@ public class MyPropertisUtil {
     public static Map<String, Object> name() throws Exception {
         Properties properties= new Properties();
         //load 表示要加载一个流，new FileReader 读取某一个文件，
-        properties.load(new FileReader(new File("src/main/resources/crmparams/crmlogin.properties")));
+        properties.load(new FileReader(new File("src/main/resources/crmparams/mtxreg.properties")));
        // properties中有内容，就可以将文件内容读出
 //        String username = properties.getProperty("username");
 //        String password = properties.getProperty("password");

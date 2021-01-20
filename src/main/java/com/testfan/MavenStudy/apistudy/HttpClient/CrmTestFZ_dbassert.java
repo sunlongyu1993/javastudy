@@ -55,7 +55,7 @@ public class CrmTestFZ_dbassert {
 
     @Test//登录
     public void test001_login() throws Exception {
-        Map<Object, Object> param = MyPropertisUtil.getAll("src/main/resources/crmparams/crmlogin.properties");
+        Map<Object, Object> param = MyPropertisUtil.getAll("src/main/resources/crmparams/mtxreg.properties");
 //        param.put("username","sly");
 
         String response = MyHttpMethod.PostForm(ip + "/login", param, header);
@@ -120,6 +120,7 @@ public class CrmTestFZ_dbassert {
         JSONArray customerIds = (JSONArray) JSONPath.extract(response, "$.data.list[*].customerId");
 //        for (Object s:customerNames) {
 //            System.out.println(s);     }
+
         //        数据库断言：查询接口如何进行断言——
         String sql="SELECT customer_id,customer_name FROM 72crm_crm_customer ORDER BY create_time DESC limit "+limit;
 //        DButil.getconn(url,dbusername,dbpwd);//获取数据库连接对象
