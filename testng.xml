@@ -10,7 +10,7 @@
     </listeners>
     <test name="MyHttpclient">
         <classes>
-            <class name="com.testfan.MavenStudy.apistudy.HttpClient.CrmTestFZ">
+            <class name="com.testfan.MavenStudy.apistudy.HttpClient.Crm.CrmTestFZ">
             </class>
         </classes>
     </test>

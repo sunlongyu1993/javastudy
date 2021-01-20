@@ -1,4 +1,4 @@
-package com.testfan.MavenStudy.apistudy.HttpClient;
+package com.testfan.MavenStudy.apistudy.HttpClient.Crm;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;

@@ -1,4 +1,4 @@
-package com.testfan.MavenStudy.apistudy.HttpClient;
+package com.testfan.MavenStudy.apistudy.HttpClient.Crm;
 
 import io.restassured.path.json.JsonPath;
 import org.apache.http.HttpEntity;

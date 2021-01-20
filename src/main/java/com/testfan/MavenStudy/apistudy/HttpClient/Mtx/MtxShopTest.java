@@ -1,4 +1,4 @@
-package com.testfan.MavenStudy.apistudy.HttpClient;
+package com.testfan.MavenStudy.apistudy.HttpClient.Mtx;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.NameValuePair;

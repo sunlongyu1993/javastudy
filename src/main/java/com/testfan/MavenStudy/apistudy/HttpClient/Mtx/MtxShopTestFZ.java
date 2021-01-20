@@ -1,4 +1,4 @@
-package com.testfan.MavenStudy.apistudy.HttpClient;
+package com.testfan.MavenStudy.apistudy.HttpClient.Mtx;
 
 import com.testfan.MavenStudy.apistudy.common.MyHttpMethod;
 import io.restassured.path.json.JsonPath;
