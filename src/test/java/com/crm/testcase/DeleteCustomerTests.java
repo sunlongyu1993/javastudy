@@ -8,7 +8,9 @@ import com.testfan.MavenStudy.apistudy.server.CrmDeleteCustomerServer;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -64,5 +66,40 @@ public class DeleteCustomerTests extends TestBase {
         String msg = JSONPath.extract(deleteCustomer2, "$.msg").toString();
         Assert.assertEquals(code2,500);
         Assert.assertEquals(msg,"该条数据与其他数据有必要关联，请勿删除");
+    }
+
+    @Test(description = "删除客户——删除多个没有任何关联的客户")
+    public void test003_deleCustomer() throws Exception {
+        String addCustomer1 = CrmAddCustomerServer.AddCustomer(host, token);   //新建一个客户
+        String customerId1 = JSONPath.extract(addCustomer1, "$.data.customerId").toString();   //获取新建客户中的customerId
+        String addCustomer2 = CrmAddCustomerServer.AddCustomer(host, token);
+        String customerId2 = JSONPath.extract(addCustomer2, "$.data.customerId").toString();
+
+        System.out.println("customerId1:"+customerId1.toString());
+        System.out.println("customerId2:"+customerId2.toString());
+
+        //调用删除的业务层接口方法
+        Map<Object,Object> updatapraram = new HashMap<Object,Object>();
+        updatapraram.put("customerIds",customerId1+","+customerId2);//注意，表单类型的参数，直接put，参数名称即可,拼接入参
+        String deleteCustomer2 = CrmDeleteCustomerServer.DeleteCustomer(host, token,updatapraram);
+        Assert.assertEquals(MyHttpMethod.getStatusCode(),200);
+        Object code2 = JSONPath.extract(deleteCustomer2, "$.code");
+        Assert.assertEquals(code2,0);
+    }
+
+    @Test(description = "删除客户——删除其他测试中的已经关联的客户")
+    public void test004_deleCustomer() throws Exception {
+//        1、新建客户；
+//        2、新建联系人，并将联系人和客户进行关联；
+//        3、删除已经关联的客户；
+
+
+        //调用删除的业务层接口方法
+        Map<Object,Object> updatapraram = new HashMap<Object,Object>();
+        updatapraram.put("customerIds",customerId1+","+customerId2);//注意，表单类型的参数，直接put，参数名称即可,拼接入参
+        String deleteCustomer2 = CrmDeleteCustomerServer.DeleteCustomer(host, token,updatapraram);
+        Assert.assertEquals(MyHttpMethod.getStatusCode(),200);
+        Object code2 = JSONPath.extract(deleteCustomer2, "$.code");
+        Assert.assertEquals(code2,0);
     }
 }
