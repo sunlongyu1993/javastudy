@@ -1,5 +1,6 @@
 package com.testfan.MavenStudy.apistudy.common;
 
+import com.alibaba.fastjson.JSONObject;
 import io.restassured.path.json.JsonPath;
 import org.apache.commons.io.FilenameUtils;
 import org.apache.http.Header;
@@ -124,8 +125,42 @@ public class MyHttpMethod {
         Reporter.log("url:"+url);
         httpPost = new HttpPost(url);
         //设置参数
+        logger.info("params"+params);
+        Reporter.log("params"+params);
         // 将json/xml的字符串转化为一个entity 对象
         HttpEntity entity = new StringEntity(params,"utf-8");
+        httpPost.setEntity(entity);
+
+        //header
+        Set<Map.Entry<Object, Object>> headersentrySet = headers.entrySet();
+        for (Map.Entry<Object, Object> entry:headersentrySet) {
+//            System.out.println(entry.getKey()+":"+entry.getValue());
+            logger.info("headers:"+entry.getKey()+":"+entry.getValue());
+            Reporter.log("headers:"+entry.getKey()+":"+entry.getValue());
+            httpPost.setHeader(entry.getKey().toString(),entry.getValue().toString());
+        }
+
+        //执行请求
+        response = httpClient.execute(httpPost);
+        //解析响应对象中的响应内容
+        HttpEntity responseEntity = response.getEntity();//响应body
+        String resString = EntityUtils.toString(responseEntity);//将entity对象转换成字符串
+        logger.info("响应内容："+resString);
+        Reporter.log("响应内容："+resString);
+
+        return resString;
+    }
+
+    //封装post：入参为json或者xml类型的方法.参数是JSONObject
+    public static String PostJson(String url, JSONObject params, Map<Object,Object> headers) throws IOException {
+        logger.info("url:"+url);
+        Reporter.log("url:"+url);
+        httpPost = new HttpPost(url);
+        //设置参数
+        logger.info("params"+params.toJSONString());
+        Reporter.log("params"+params.toJSONString());
+        // 将json/xml的字符串转化为一个entity 对象
+        HttpEntity entity = new StringEntity(params.toJSONString(),"utf-8");
         httpPost.setEntity(entity);
 
         //header
