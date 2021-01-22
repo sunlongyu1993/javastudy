@@ -27,9 +27,9 @@ public class AddCustomerTests extends TestBase {
 //        Assert.assertEquals(code,"0");
 //        String token = JsonPath.from(login).get("Admin-Token");//获取到token
         //读取入参中的json参数
-        String AddCustomer = CrmAddCustomerServer.AddCustomer(host, token);// 获取响应结果，进行断言
+        String Addcustomer = CrmAddCustomerServer.AddCustomer(host, token);// 获取响应结果，进行断言
         Assert.assertEquals(MyHttpMethod.getStatusCode(),200);
-        String code1 = JSONPath.extract(AddCustomer, "$.code").toString();
+        String code1 = JSONPath.extract(Addcustomer, "$.code").toString();
         Assert.assertEquals(code1,"0");
     }
     @Test(description = "修改入参中的客户名称")
