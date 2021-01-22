@@ -54,8 +54,8 @@ public class AddContactsTests extends TestBase {
     }
 
 //    ==========================================================
-    //多接口的组合场景
-    //获取添加联系人中的customer_id，作为此接口的入参
+    //多接口的组合场景:新增客户+添加联系人
+    //获取新增客户中的customer_id，作为新增联系人接口的入参
     @Test(description = "创建客户和新增客户关联")
     public void test005_AddContacts() throws Exception {
         //先进行新增客户，从新增客户结果中获取最新的客户id
@@ -66,7 +66,7 @@ public class AddContactsTests extends TestBase {
         Object customerId = JSONPath.extract(Addcustomer, "$.data.customerId");
 //        System.out.println("customerId:"+customerId.toString());
 
-        //然后调用新增联系人接口
+        //然后将调用新增联系人接口
         Map<Object,Object> updatapraram = new HashMap<Object,Object>();
         updatapraram.put("$.entity.customer_id",customerId);
         String Addcontacts = CrmAddContactsServer.AddContacts(host, token,updatapraram);// 获取响应结果，进行断言
