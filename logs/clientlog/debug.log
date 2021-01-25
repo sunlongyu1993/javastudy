@@ -167,3 +167,303 @@
 [crazyapi] 2021/01/20 22:32:52   INFO main com.testfan.MavenStudy.apistudy.utils.ExcelUtil:88 - 读取【reg】的第4行第3列的值是：username 
 [crazyapi] 2021/01/20 22:32:52   INFO main com.testfan.MavenStudy.apistudy.utils.ExcelUtil:88 - 读取【reg】的第4行第4列的值是：1 
 [crazyapi] 2021/01/20 22:32:52   INFO main com.testfan.MavenStudy.apistudy.utils.ExcelUtil:88 - 读取【reg】的第4行第5列的值是：密码不能为空 
+[crazyapi] 2021/01/25 14:10:15   INFO main com.testfan.MavenStudy.apistudy.utils.ExcelUtil:88 - 读取【crm】的第1行第0列的值是：创建客户-正确 
+[crazyapi] 2021/01/25 14:10:15   INFO main com.testfan.MavenStudy.apistudy.utils.ExcelUtil:88 - 读取【crm】的第1行第1列的值是：创建客户 
+[crazyapi] 2021/01/25 14:10:15   INFO main com.testfan.MavenStudy.apistudy.utils.ExcelUtil:88 - 读取【crm】的第1行第2列的值是：/CrmCustomer/addOrUpdate 
+[crazyapi] 2021/01/25 14:10:15   INFO main com.testfan.MavenStudy.apistudy.utils.ExcelUtil:88 - 读取【crm】的第1行第3列的值是：POST 
+[crazyapi] 2021/01/25 14:10:15   INFO main com.testfan.MavenStudy.apistudy.utils.ExcelUtil:88 - 读取【crm】的第1行第4列的值是：{
+"Admin-Token":"token"
+} 
+[crazyapi] 2021/01/25 14:10:15   INFO main com.testfan.MavenStudy.apistudy.utils.ExcelUtil:88 - 读取【crm】的第1行第5列的值是：{
+ "entity": {
+  "customer_name": "shamo123",
+  "mobile": "18991112345",
+  "telephone": "01028375678",
+  "website": "http://testfan.cn",
+  "next_time": "2020-04-02 00:00:00",
+  "remark": "这是备注",
+  "address": "北京市,北京城区,昌平区",
+  "detailAddress": "霍营地铁",
+  "location": "",
+  "lng": "",
+  "lat": ""
+ }
+} 
+[crazyapi] 2021/01/25 14:10:15   INFO main com.testfan.MavenStudy.apistudy.utils.ExcelUtil:88 - 读取【crm】的第1行第6列的值是：{
+"code":0
+} 
+[crazyapi] 2021/01/25 14:10:15   INFO main com.testfan.MavenStudy.apistudy.utils.ExcelUtil:88 - 读取【crm】的第2行第0列的值是：创建客户-客户名称为空 
+[crazyapi] 2021/01/25 14:10:15   INFO main com.testfan.MavenStudy.apistudy.utils.ExcelUtil:88 - 读取【crm】的第2行第1列的值是：创建客户 
+[crazyapi] 2021/01/25 14:10:15   INFO main com.testfan.MavenStudy.apistudy.utils.ExcelUtil:88 - 读取【crm】的第2行第2列的值是：/CrmCustomer/addOrUpdate 
+[crazyapi] 2021/01/25 14:10:15   INFO main com.testfan.MavenStudy.apistudy.utils.ExcelUtil:88 - 读取【crm】的第2行第3列的值是：POST 
+[crazyapi] 2021/01/25 14:10:15   INFO main com.testfan.MavenStudy.apistudy.utils.ExcelUtil:88 - 读取【crm】的第2行第4列的值是：{
+"Admin-Token":"token"
+} 
+[crazyapi] 2021/01/25 14:10:15   INFO main com.testfan.MavenStudy.apistudy.utils.ExcelUtil:88 - 读取【crm】的第2行第5列的值是：{
+ "entity": {
+  "customer_name": "",
+  "mobile": "18991112345",
+  "telephone": "01028375678",
+  "website": "http://testfan.cn",
+  "next_time": "2020-04-02 00:00:00",
+  "remark": "这是备注",
+  "address": "北京市,北京城区,昌平区",
+  "detailAddress": "霍营地铁",
+  "location": "",
+  "lng": "",
+  "lat": ""
+ }
+} 
+[crazyapi] 2021/01/25 14:10:15   INFO main com.testfan.MavenStudy.apistudy.utils.ExcelUtil:88 - 读取【crm】的第2行第6列的值是：{
+"code":0,
+"msg":"客户名称不能为空"
+} 
+[crazyapi] 2021/01/25 14:10:15   INFO main com.testfan.MavenStudy.apistudy.utils.ExcelUtil:88 - 读取【crm】的第3行第0列的值是：创建联系人-正确 
+[crazyapi] 2021/01/25 14:10:15   INFO main com.testfan.MavenStudy.apistudy.utils.ExcelUtil:88 - 读取【crm】的第3行第1列的值是：创建联系人 
+[crazyapi] 2021/01/25 14:10:15   INFO main com.testfan.MavenStudy.apistudy.utils.ExcelUtil:88 - 读取【crm】的第3行第2列的值是：/CrmContacts/addOrUpdate 
+[crazyapi] 2021/01/25 14:10:15   INFO main com.testfan.MavenStudy.apistudy.utils.ExcelUtil:88 - 读取【crm】的第3行第3列的值是：POST 
+[crazyapi] 2021/01/25 14:10:15   INFO main com.testfan.MavenStudy.apistudy.utils.ExcelUtil:88 - 读取【crm】的第3行第4列的值是：{
+"Admin-Token":"token"
+} 
+[crazyapi] 2021/01/25 14:10:15   INFO main com.testfan.MavenStudy.apistudy.utils.ExcelUtil:88 - 读取【crm】的第3行第5列的值是：{
+ "entity": {
+  "name": "沙漠",
+  "customer_id": 5,
+  "mobile": "18098909090",
+  "telephone": "01023456789",
+  "email": "shddhdd@163.com",
+  "post": "总经理",
+  "address": "北京霍营",
+  "next_time": "2020-04-23 16:03:47",
+  "remark": "这是备注"
+ }
+}
+ 
+[crazyapi] 2021/01/25 14:10:15   INFO main com.testfan.MavenStudy.apistudy.utils.ExcelUtil:88 - 读取【crm】的第3行第6列的值是：{
+"code":0
+} 
+[crazyapi] 2021/01/25 14:10:15   INFO main com.testfan.MavenStudy.apistudy.utils.ExcelUtil:88 - 读取【crm】的第4行第0列的值是：创建联系人-客户不存在 
+[crazyapi] 2021/01/25 14:10:15   INFO main com.testfan.MavenStudy.apistudy.utils.ExcelUtil:88 - 读取【crm】的第4行第1列的值是：创建联系人 
+[crazyapi] 2021/01/25 14:10:15   INFO main com.testfan.MavenStudy.apistudy.utils.ExcelUtil:88 - 读取【crm】的第4行第2列的值是：/CrmContacts/addOrUpdate 
+[crazyapi] 2021/01/25 14:10:15   INFO main com.testfan.MavenStudy.apistudy.utils.ExcelUtil:88 - 读取【crm】的第4行第3列的值是：POST 
+[crazyapi] 2021/01/25 14:10:15   INFO main com.testfan.MavenStudy.apistudy.utils.ExcelUtil:88 - 读取【crm】的第4行第4列的值是：{
+"Admin-Token":"token"
+} 
+[crazyapi] 2021/01/25 14:10:15   INFO main com.testfan.MavenStudy.apistudy.utils.ExcelUtil:88 - 读取【crm】的第4行第5列的值是：{
+ "entity": {
+  "name": "沙漠",
+  "customer_id": 237466,
+  "mobile": "18098909090",
+  "telephone": "01023456789",
+  "email": "shddhdd@163.com",
+  "post": "总经理",
+  "address": "北京霍营",
+  "next_time": "2020-04-23 16:03:47",
+  "remark": "这是备注"
+ }
+}
+ 
+[crazyapi] 2021/01/25 14:10:15   INFO main com.testfan.MavenStudy.apistudy.utils.ExcelUtil:88 - 读取【crm】的第4行第6列的值是：{
+"code":0,
+"msg":"客户不存在"
+} 
+[crazyapi] 2021/01/25 15:06:25   INFO main com.testfan.MavenStudy.apistudy.utils.ExcelUtil:88 - 读取【crm】的第1行第0列的值是：创建客户-正确 
+[crazyapi] 2021/01/25 15:06:25   INFO main com.testfan.MavenStudy.apistudy.utils.ExcelUtil:88 - 读取【crm】的第1行第1列的值是：创建客户 
+[crazyapi] 2021/01/25 15:06:25   INFO main com.testfan.MavenStudy.apistudy.utils.ExcelUtil:88 - 读取【crm】的第1行第2列的值是：/CrmCustomer/addOrUpdate 
+[crazyapi] 2021/01/25 15:06:25   INFO main com.testfan.MavenStudy.apistudy.utils.ExcelUtil:88 - 读取【crm】的第1行第3列的值是：POST 
+[crazyapi] 2021/01/25 15:06:25   INFO main com.testfan.MavenStudy.apistudy.utils.ExcelUtil:88 - 读取【crm】的第1行第4列的值是：{
+"Admin-Token":"token"
+} 
+[crazyapi] 2021/01/25 15:06:25   INFO main com.testfan.MavenStudy.apistudy.utils.ExcelUtil:88 - 读取【crm】的第1行第5列的值是：{
+ "entity": {
+  "customer_name": "shamo123",
+  "mobile": "18991112345",
+  "telephone": "01028375678",
+  "website": "http://testfan.cn",
+  "next_time": "2020-04-02 00:00:00",
+  "remark": "这是备注",
+  "address": "北京市,北京城区,昌平区",
+  "detailAddress": "霍营地铁",
+  "location": "",
+  "lng": "",
+  "lat": ""
+ }
+} 
+[crazyapi] 2021/01/25 15:06:25   INFO main com.testfan.MavenStudy.apistudy.utils.ExcelUtil:88 - 读取【crm】的第1行第6列的值是：{
+"code":0
+} 
+[crazyapi] 2021/01/25 15:06:25   INFO main com.testfan.MavenStudy.apistudy.utils.ExcelUtil:88 - 读取【crm】的第2行第0列的值是：创建客户-客户名称为空 
+[crazyapi] 2021/01/25 15:06:25   INFO main com.testfan.MavenStudy.apistudy.utils.ExcelUtil:88 - 读取【crm】的第2行第1列的值是：创建客户 
+[crazyapi] 2021/01/25 15:06:25   INFO main com.testfan.MavenStudy.apistudy.utils.ExcelUtil:88 - 读取【crm】的第2行第2列的值是：/CrmCustomer/addOrUpdate 
+[crazyapi] 2021/01/25 15:06:25   INFO main com.testfan.MavenStudy.apistudy.utils.ExcelUtil:88 - 读取【crm】的第2行第3列的值是：POST 
+[crazyapi] 2021/01/25 15:06:25   INFO main com.testfan.MavenStudy.apistudy.utils.ExcelUtil:88 - 读取【crm】的第2行第4列的值是：{
+"Admin-Token":"token"
+} 
+[crazyapi] 2021/01/25 15:06:25   INFO main com.testfan.MavenStudy.apistudy.utils.ExcelUtil:88 - 读取【crm】的第2行第5列的值是：{
+ "entity": {
+  "customer_name": "",
+  "mobile": "18991112345",
+  "telephone": "01028375678",
+  "website": "http://testfan.cn",
+  "next_time": "2020-04-02 00:00:00",
+  "remark": "这是备注",
+  "address": "北京市,北京城区,昌平区",
+  "detailAddress": "霍营地铁",
+  "location": "",
+  "lng": "",
+  "lat": ""
+ }
+} 
+[crazyapi] 2021/01/25 15:06:25   INFO main com.testfan.MavenStudy.apistudy.utils.ExcelUtil:88 - 读取【crm】的第2行第6列的值是：{
+"code":0,
+"msg":"客户名称不能为空"
+} 
+[crazyapi] 2021/01/25 15:06:25   INFO main com.testfan.MavenStudy.apistudy.utils.ExcelUtil:88 - 读取【crm】的第3行第0列的值是：创建联系人-正确 
+[crazyapi] 2021/01/25 15:06:25   INFO main com.testfan.MavenStudy.apistudy.utils.ExcelUtil:88 - 读取【crm】的第3行第1列的值是：创建联系人 
+[crazyapi] 2021/01/25 15:06:25   INFO main com.testfan.MavenStudy.apistudy.utils.ExcelUtil:88 - 读取【crm】的第3行第2列的值是：/CrmContacts/addOrUpdate 
+[crazyapi] 2021/01/25 15:06:25   INFO main com.testfan.MavenStudy.apistudy.utils.ExcelUtil:88 - 读取【crm】的第3行第3列的值是：POST 
+[crazyapi] 2021/01/25 15:06:25   INFO main com.testfan.MavenStudy.apistudy.utils.ExcelUtil:88 - 读取【crm】的第3行第4列的值是：{
+"Admin-Token":"token"
+} 
+[crazyapi] 2021/01/25 15:06:25   INFO main com.testfan.MavenStudy.apistudy.utils.ExcelUtil:88 - 读取【crm】的第3行第5列的值是：{
+ "entity": {
+  "name": "沙漠",
+  "customer_id": 5,
+  "mobile": "18098909090",
+  "telephone": "01023456789",
+  "email": "shddhdd@163.com",
+  "post": "总经理",
+  "address": "北京霍营",
+  "next_time": "2020-04-23 16:03:47",
+  "remark": "这是备注"
+ }
+}
+ 
+[crazyapi] 2021/01/25 15:06:25   INFO main com.testfan.MavenStudy.apistudy.utils.ExcelUtil:88 - 读取【crm】的第3行第6列的值是：{
+"code":0
+} 
+[crazyapi] 2021/01/25 15:06:25   INFO main com.testfan.MavenStudy.apistudy.utils.ExcelUtil:88 - 读取【crm】的第4行第0列的值是：创建联系人-客户不存在 
+[crazyapi] 2021/01/25 15:06:25   INFO main com.testfan.MavenStudy.apistudy.utils.ExcelUtil:88 - 读取【crm】的第4行第1列的值是：创建联系人 
+[crazyapi] 2021/01/25 15:06:25   INFO main com.testfan.MavenStudy.apistudy.utils.ExcelUtil:88 - 读取【crm】的第4行第2列的值是：/CrmContacts/addOrUpdate 
+[crazyapi] 2021/01/25 15:06:25   INFO main com.testfan.MavenStudy.apistudy.utils.ExcelUtil:88 - 读取【crm】的第4行第3列的值是：POST 
+[crazyapi] 2021/01/25 15:06:25   INFO main com.testfan.MavenStudy.apistudy.utils.ExcelUtil:88 - 读取【crm】的第4行第4列的值是：{
+"Admin-Token":"token"
+} 
+[crazyapi] 2021/01/25 15:06:25   INFO main com.testfan.MavenStudy.apistudy.utils.ExcelUtil:88 - 读取【crm】的第4行第5列的值是：{
+ "entity": {
+  "name": "沙漠",
+  "customer_id": 237466,
+  "mobile": "18098909090",
+  "telephone": "01023456789",
+  "email": "shddhdd@163.com",
+  "post": "总经理",
+  "address": "北京霍营",
+  "next_time": "2020-04-23 16:03:47",
+  "remark": "这是备注"
+ }
+}
+ 
+[crazyapi] 2021/01/25 15:06:25   INFO main com.testfan.MavenStudy.apistudy.utils.ExcelUtil:88 - 读取【crm】的第4行第6列的值是：{
+"code":0,
+"msg":"客户不存在"
+} 
+[crazyapi] 2021/01/25 15:14:4   INFO main com.testfan.MavenStudy.apistudy.utils.ExcelUtil:88 - 读取【crm】的第1行第0列的值是：创建客户-正确 
+[crazyapi] 2021/01/25 15:14:4   INFO main com.testfan.MavenStudy.apistudy.utils.ExcelUtil:88 - 读取【crm】的第1行第1列的值是：创建客户 
+[crazyapi] 2021/01/25 15:14:4   INFO main com.testfan.MavenStudy.apistudy.utils.ExcelUtil:88 - 读取【crm】的第1行第2列的值是：/CrmCustomer/addOrUpdate 
+[crazyapi] 2021/01/25 15:14:4   INFO main com.testfan.MavenStudy.apistudy.utils.ExcelUtil:88 - 读取【crm】的第1行第3列的值是：POST 
+[crazyapi] 2021/01/25 15:14:4   INFO main com.testfan.MavenStudy.apistudy.utils.ExcelUtil:88 - 读取【crm】的第1行第4列的值是：{
+"Admin-Token":"token"
+} 
+[crazyapi] 2021/01/25 15:14:4   INFO main com.testfan.MavenStudy.apistudy.utils.ExcelUtil:88 - 读取【crm】的第1行第5列的值是：{
+ "entity": {
+  "customer_name": "shamo123",
+  "mobile": "18991112345",
+  "telephone": "01028375678",
+  "website": "http://testfan.cn",
+  "next_time": "2020-04-02 00:00:00",
+  "remark": "这是备注",
+  "address": "北京市,北京城区,昌平区",
+  "detailAddress": "霍营地铁",
+  "location": "",
+  "lng": "",
+  "lat": ""
+ }
+} 
+[crazyapi] 2021/01/25 15:14:4   INFO main com.testfan.MavenStudy.apistudy.utils.ExcelUtil:88 - 读取【crm】的第1行第6列的值是：{
+"code":0
+} 
+[crazyapi] 2021/01/25 15:14:4   INFO main com.testfan.MavenStudy.apistudy.utils.ExcelUtil:88 - 读取【crm】的第2行第0列的值是：创建客户-客户名称为空 
+[crazyapi] 2021/01/25 15:14:4   INFO main com.testfan.MavenStudy.apistudy.utils.ExcelUtil:88 - 读取【crm】的第2行第1列的值是：创建客户 
+[crazyapi] 2021/01/25 15:14:4   INFO main com.testfan.MavenStudy.apistudy.utils.ExcelUtil:88 - 读取【crm】的第2行第2列的值是：/CrmCustomer/addOrUpdate 
+[crazyapi] 2021/01/25 15:14:4   INFO main com.testfan.MavenStudy.apistudy.utils.ExcelUtil:88 - 读取【crm】的第2行第3列的值是：POST 
+[crazyapi] 2021/01/25 15:14:4   INFO main com.testfan.MavenStudy.apistudy.utils.ExcelUtil:88 - 读取【crm】的第2行第4列的值是：{
+"Admin-Token":"token"
+} 
+[crazyapi] 2021/01/25 15:14:4   INFO main com.testfan.MavenStudy.apistudy.utils.ExcelUtil:88 - 读取【crm】的第2行第5列的值是：{
+ "entity": {
+  "customer_name": "",
+  "mobile": "18991112345",
+  "telephone": "01028375678",
+  "website": "http://testfan.cn",
+  "next_time": "2020-04-02 00:00:00",
+  "remark": "这是备注",
+  "address": "北京市,北京城区,昌平区",
+  "detailAddress": "霍营地铁",
+  "location": "",
+  "lng": "",
+  "lat": ""
+ }
+} 
+[crazyapi] 2021/01/25 15:14:4   INFO main com.testfan.MavenStudy.apistudy.utils.ExcelUtil:88 - 读取【crm】的第2行第6列的值是：{
+"code":0,
+"msg":"客户名称不能为空"
+} 
+[crazyapi] 2021/01/25 15:14:4   INFO main com.testfan.MavenStudy.apistudy.utils.ExcelUtil:88 - 读取【crm】的第3行第0列的值是：创建联系人-正确 
+[crazyapi] 2021/01/25 15:14:4   INFO main com.testfan.MavenStudy.apistudy.utils.ExcelUtil:88 - 读取【crm】的第3行第1列的值是：创建联系人 
+[crazyapi] 2021/01/25 15:14:4   INFO main com.testfan.MavenStudy.apistudy.utils.ExcelUtil:88 - 读取【crm】的第3行第2列的值是：/CrmContacts/addOrUpdate 
+[crazyapi] 2021/01/25 15:14:4   INFO main com.testfan.MavenStudy.apistudy.utils.ExcelUtil:88 - 读取【crm】的第3行第3列的值是：POST 
+[crazyapi] 2021/01/25 15:14:4   INFO main com.testfan.MavenStudy.apistudy.utils.ExcelUtil:88 - 读取【crm】的第3行第4列的值是：{
+"Admin-Token":"token"
+} 
+[crazyapi] 2021/01/25 15:14:4   INFO main com.testfan.MavenStudy.apistudy.utils.ExcelUtil:88 - 读取【crm】的第3行第5列的值是：{
+ "entity": {
+  "name": "沙漠",
+  "customer_id": 5,
+  "mobile": "18098909090",
+  "telephone": "01023456789",
+  "email": "shddhdd@163.com",
+  "post": "总经理",
+  "address": "北京霍营",
+  "next_time": "2020-04-23 16:03:47",
+  "remark": "这是备注"
+ }
+}
+ 
+[crazyapi] 2021/01/25 15:14:4   INFO main com.testfan.MavenStudy.apistudy.utils.ExcelUtil:88 - 读取【crm】的第3行第6列的值是：{
+"code":0
+} 
+[crazyapi] 2021/01/25 15:14:4   INFO main com.testfan.MavenStudy.apistudy.utils.ExcelUtil:88 - 读取【crm】的第4行第0列的值是：创建联系人-客户不存在 
+[crazyapi] 2021/01/25 15:14:4   INFO main com.testfan.MavenStudy.apistudy.utils.ExcelUtil:88 - 读取【crm】的第4行第1列的值是：创建联系人 
+[crazyapi] 2021/01/25 15:14:4   INFO main com.testfan.MavenStudy.apistudy.utils.ExcelUtil:88 - 读取【crm】的第4行第2列的值是：/CrmContacts/addOrUpdate 
+[crazyapi] 2021/01/25 15:14:4   INFO main com.testfan.MavenStudy.apistudy.utils.ExcelUtil:88 - 读取【crm】的第4行第3列的值是：POST 
+[crazyapi] 2021/01/25 15:14:4   INFO main com.testfan.MavenStudy.apistudy.utils.ExcelUtil:88 - 读取【crm】的第4行第4列的值是：{
+"Admin-Token":"token"
+} 
+[crazyapi] 2021/01/25 15:14:4   INFO main com.testfan.MavenStudy.apistudy.utils.ExcelUtil:88 - 读取【crm】的第4行第5列的值是：{
+ "entity": {
+  "name": "沙漠",
+  "customer_id": 237466,
+  "mobile": "18098909090",
+  "telephone": "01023456789",
+  "email": "shddhdd@163.com",
+  "post": "总经理",
+  "address": "北京霍营",
+  "next_time": "2020-04-23 16:03:47",
+  "remark": "这是备注"
+ }
+}
+ 
+[crazyapi] 2021/01/25 15:14:4   INFO main com.testfan.MavenStudy.apistudy.utils.ExcelUtil:88 - 读取【crm】的第4行第6列的值是：{
+"code":0,
+"msg":"客户不存在"
+} 
