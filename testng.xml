@@ -8,9 +8,11 @@
 <!--        reportng的监听-->
         <listener class-name="org.uncommons.reportng.HTMLReporter" />
     </listeners>
-    <test name="MyHttpclient">
+    <test name="crm">
         <classes>
-            <class name="com.testfan.MavenStudy.apistudy.HttpClient.Crm.CrmTestFZ">
+            <class name="com.crm.testcase.AddCustomerTests"/>
+            <class name="com.crm.testcase.AddContactsTests"/>
+            <class name="com.crm.testcase.DeleteCustomerTests">
             </class>
         </classes>
     </test>

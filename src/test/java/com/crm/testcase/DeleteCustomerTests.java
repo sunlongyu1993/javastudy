@@ -5,6 +5,7 @@ import com.testfan.MavenStudy.apistudy.common.MyHttpMethod;
 import com.testfan.MavenStudy.apistudy.server.CrmAddContactsServer;
 import com.testfan.MavenStudy.apistudy.server.CrmAddCustomerServer;
 import com.testfan.MavenStudy.apistudy.server.CrmDeleteCustomerServer;
+import com.testfan.MavenStudy.apistudy.utils.Props;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -92,14 +93,17 @@ public class DeleteCustomerTests extends TestBase {
 //        1、新建客户；
 //        2、新建联系人，并将联系人和客户进行关联；
 //        3、删除已经关联的客户；
-
-
         //调用删除的业务层接口方法
         Map<Object,Object> updatapraram = new HashMap<Object,Object>();
-        updatapraram.put("customerIds",customerId1+","+customerId2);//注意，表单类型的参数，直接put，参数名称即可,拼接入参
+        updatapraram.put("customerIds", Props.getObject("customerId"));//注意，表单类型的参数，直接put，参数名称即可,拼接入参
+
         String deleteCustomer2 = CrmDeleteCustomerServer.DeleteCustomer(host, token,updatapraram);
         Assert.assertEquals(MyHttpMethod.getStatusCode(),200);
         Object code2 = JSONPath.extract(deleteCustomer2, "$.code");
-        Assert.assertEquals(code2,0);
+        Assert.assertEquals(code2,500);
+        String msg = JSONPath.extract(deleteCustomer2, "$.msg").toString();
+        Assert.assertEquals(msg,"该条数据与其他数据有必要关联，请勿删除");
+
+
     }
 }

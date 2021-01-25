@@ -4,6 +4,7 @@ import com.alibaba.fastjson.JSONPath;
 import com.testfan.MavenStudy.apistudy.common.MyHttpMethod;
 import com.testfan.MavenStudy.apistudy.server.CrmAddContactsServer;
 import com.testfan.MavenStudy.apistudy.server.CrmAddCustomerServer;
+import com.testfan.MavenStudy.apistudy.utils.Props;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -44,9 +45,17 @@ public class AddContactsTests extends TestBase {
         String code1 = JSONPath.extract(AddCustomer, "$.code").toString();
         Assert.assertEquals(code1,"0");
     }
-    @Test(description = "删除入参中的name、customer_id等多个字段")
+    @Test(description = "删除入参中的name、customer_id等多个必填字段")
     public void test004_AddContacts() throws Exception {
         String[] deletedparam ={"$.entity.name","$.entity.customer_id"};
+        String AddCustomer =CrmAddContactsServer.AddContacts(host, token,deletedparam);// 获取响应结果，进行断言
+        Assert.assertEquals(MyHttpMethod.getStatusCode(),200);
+        Object code1 = JSONPath.extract(AddCustomer, "$.code");
+        Assert.assertEquals(code1,500);
+    }
+    @Test(description = "删除入参中的name、customer_id等多个字段")
+    public void test005_AddContacts() throws Exception {
+        String[] deletedparam ={"$.entity.remark","$.entity.address"};
         String AddCustomer =CrmAddContactsServer.AddContacts(host, token,deletedparam);// 获取响应结果，进行断言
         Assert.assertEquals(MyHttpMethod.getStatusCode(),200);
         String code1 = JSONPath.extract(AddCustomer, "$.code").toString();
@@ -57,7 +66,7 @@ public class AddContactsTests extends TestBase {
     //多接口的组合场景:新增客户+添加联系人
     //获取新增客户中的customer_id，作为新增联系人接口的入参
     @Test(description = "创建客户和新增客户关联")
-    public void test005_AddContacts() throws Exception {
+    public void test006_AddContacts() throws Exception {
         //先进行新增客户，从新增客户结果中获取最新的客户id
         String Addcustomer = CrmAddCustomerServer.AddCustomer(host, token);// 获取响应结果，进行断言
         Assert.assertEquals(MyHttpMethod.getStatusCode(),200);
@@ -73,6 +82,7 @@ public class AddContactsTests extends TestBase {
         Assert.assertEquals(MyHttpMethod.getStatusCode(),200);
         String code2 = JSONPath.extract(Addcontacts, "$.code").toString();
         Assert.assertEquals(code2,"0");
+        Props.put("customerId",customerId);
     }
 
 }
