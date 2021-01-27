@@ -10,9 +10,10 @@
     </listeners>
     <test name="crm">
         <classes>
-            <class name="com.crm.testcase.AddCustomerTests"/>
-            <class name="com.crm.testcase.AddContactsTests"/>
-            <class name="com.crm.testcase.DeleteCustomerTests">
+<!--            <class name="com.crm.testcase.AddCustomerTests"/>-->
+<!--            <class name="com.crm.testcase.AddContactsTests"/>-->
+<!--            <class name="com.crm.testcase.DeleteCustomerTests">-->
+            <class name="com.dubbo.dubbotest.lotterytest.DubboTests_dataprovide">
             </class>
         </classes>
     </test>

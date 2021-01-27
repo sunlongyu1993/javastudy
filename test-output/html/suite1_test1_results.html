@@ -12,7 +12,7 @@
 <body>
 <h1>crm</h1>
 <p>
-  Test duration: 10.692s
+  Test duration: 3.566s
 </p>
 
 
@@ -22,318 +22,81 @@
   <table class="resultsTable">
     <tr><th colspan="3" class="header passed">Passed Tests</th></tr>
           <tr>
-        <td colspan="3" class="group">com.crm.testcase.AddContactsTests</td>
+        <td colspan="3" class="group">com.dubbo.dubbotest.lotterytest.DubboTests_dataprovide</td>
       </tr>
             
 <tr>
   <td class="method">
-                  <span class="description" title="正确新建联系人">test001_AddContacts</span>
+                  test01_lottery
       </td>
   <td class="duration">
-    0.034s
+    0.014s
   </td>
   <td class="result">
         
+          <i>Method arguments: </i><span class="arguments">"抽奖——活动已结束", 3, 1, "message=活动已结束"</span><br />
     
-            <div class="testOutput">
-                        url:http://192.168.23.135:8090/CrmContacts/addOrUpdate<br />
-                                params{&quot;entity&quot;:{&quot;address&quot;:&quot;北京霍营&quot;,&quot;post&quot;:&quot;总经理&quot;,&quot;next_time&quot;:&quot;2020-04-23 16:03:47&quot;,&quot;name&quot;:&quot;沙漠&quot;,&quot;mobile&quot;:&quot;18098909090&quot;,&quot;telephone&quot;:&quot;01023456789&quot;,&quot;remark&quot;:&quot;这是备注&quot;,&quot;customer_id&quot;:5,&quot;email&quot;:&quot;shddhdd@163.com&quot;}}<br />
-                                headers:Admin-Token:cf028827ae9f491681706ed36f858a71<br />
-                                响应内容：{&quot;code&quot;:0}<br />
-                  </div>
-    
+        
 
       </td>
 </tr>
 <tr>
   <td class="method">
-                  <span class="description" title="修改入参中的customer_id为不存在的值">test002_AddContacts</span>
+                  test01_lottery
       </td>
   <td class="duration">
-    0.081s
+    0.017s
   </td>
   <td class="result">
         
+          <i>Method arguments: </i><span class="arguments">"抽奖-活动id不存在", 199, 1, "message=活动不存在"</span><br />
     
-            <div class="testOutput">
-                        url:http://192.168.23.135:8090/CrmContacts/addOrUpdate<br />
-                                params{&quot;entity&quot;:{&quot;address&quot;:&quot;北京霍营&quot;,&quot;post&quot;:&quot;总经理&quot;,&quot;next_time&quot;:&quot;2020-04-23 16:03:47&quot;,&quot;name&quot;:&quot;沙漠&quot;,&quot;mobile&quot;:&quot;18098909090&quot;,&quot;telephone&quot;:&quot;01023456789&quot;,&quot;remark&quot;:&quot;这是备注&quot;,&quot;customer_id&quot;:&quot;300000&quot;,&quot;email&quot;:&quot;shddhdd@163.com&quot;}}<br />
-                                headers:Admin-Token:cf028827ae9f491681706ed36f858a71<br />
-                                响应内容：{&quot;code&quot;:0}<br />
-                  </div>
-    
+        
 
       </td>
 </tr>
 <tr>
   <td class="method">
-                  <span class="description" title="修改入参中的name为空的值">test003_AddContacts</span>
+                  test01_lottery
       </td>
   <td class="duration">
-    0.041s
+    0.023s
   </td>
   <td class="result">
         
+          <i>Method arguments: </i><span class="arguments">"抽奖——用户不存在", 1, 7, "message=该用户无积分"</span><br />
     
-            <div class="testOutput">
-                        url:http://192.168.23.135:8090/CrmContacts/addOrUpdate<br />
-                                params{&quot;entity&quot;:{&quot;address&quot;:&quot;北京霍营&quot;,&quot;post&quot;:&quot;总经理&quot;,&quot;next_time&quot;:&quot;2020-04-23 16:03:47&quot;,&quot;name&quot;:&quot;&quot;,&quot;mobile&quot;:&quot;18098909090&quot;,&quot;telephone&quot;:&quot;01023456789&quot;,&quot;remark&quot;:&quot;这是备注&quot;,&quot;customer_id&quot;:5,&quot;email&quot;:&quot;shddhdd@163.com&quot;}}<br />
-                                headers:Admin-Token:cf028827ae9f491681706ed36f858a71<br />
-                                响应内容：{&quot;code&quot;:0}<br />
-                  </div>
-    
+        
 
       </td>
 </tr>
 <tr>
   <td class="method">
-                  <span class="description" title="删除入参中的name、customer_id等多个必填字段">test004_AddContacts</span>
+                  test01_lottery
       </td>
   <td class="duration">
-    0.063s
+    3.494s
   </td>
   <td class="result">
         
+          <i>Method arguments: </i><span class="arguments">"抽奖——正确的接口", 1, 1, "success=true"</span><br />
     
-            <div class="testOutput">
-                        url:http://192.168.23.135:8090/CrmContacts/addOrUpdate<br />
-                                params{&quot;entity&quot;:{&quot;address&quot;:&quot;北京霍营&quot;,&quot;post&quot;:&quot;总经理&quot;,&quot;next_time&quot;:&quot;2020-04-23 16:03:47&quot;,&quot;mobile&quot;:&quot;18098909090&quot;,&quot;telephone&quot;:&quot;01023456789&quot;,&quot;remark&quot;:&quot;这是备注&quot;,&quot;email&quot;:&quot;shddhdd@163.com&quot;}}<br />
-                                headers:Admin-Token:cf028827ae9f491681706ed36f858a71<br />
-                                响应内容：{&quot;code&quot;:500,&quot;msg&quot;:&quot;服务器响应异常&quot;}<br />
-                  </div>
-    
+        
 
       </td>
 </tr>
 <tr>
   <td class="method">
-                  <span class="description" title="删除入参中的name、customer_id等多个字段">test005_AddContacts</span>
+                  test01_lottery
       </td>
   <td class="duration">
-    0.068s
+    0.018s
   </td>
   <td class="result">
         
+          <i>Method arguments: </i><span class="arguments">"抽奖——活动类型不符", 2, 1, "message=活动配置错误"</span><br />
     
-            <div class="testOutput">
-                        url:http://192.168.23.135:8090/CrmContacts/addOrUpdate<br />
-                                params{&quot;entity&quot;:{&quot;post&quot;:&quot;总经理&quot;,&quot;next_time&quot;:&quot;2020-04-23 16:03:47&quot;,&quot;name&quot;:&quot;沙漠&quot;,&quot;mobile&quot;:&quot;18098909090&quot;,&quot;telephone&quot;:&quot;01023456789&quot;,&quot;customer_id&quot;:5,&quot;email&quot;:&quot;shddhdd@163.com&quot;}}<br />
-                                headers:Admin-Token:cf028827ae9f491681706ed36f858a71<br />
-                                响应内容：{&quot;code&quot;:0}<br />
-                  </div>
-    
-
-      </td>
-</tr>
-<tr>
-  <td class="method">
-                  <span class="description" title="创建客户和新增客户关联">test006_AddContacts</span>
-      </td>
-  <td class="duration">
-    0.081s
-  </td>
-  <td class="result">
         
-    
-            <div class="testOutput">
-                        url:http://192.168.23.135:8090/CrmCustomer/addOrUpdate<br />
-                                params{&quot;entity&quot;:{&quot;website&quot;:&quot;http://testfan.cn&quot;,&quot;address&quot;:&quot;北京市,北京城区,昌平区&quot;,&quot;next_time&quot;:&quot;2020-04-02 00:00:00&quot;,&quot;lng&quot;:&quot;&quot;,&quot;mobile&quot;:&quot;18991112345&quot;,&quot;detailAddress&quot;:&quot;霍营地铁&quot;,&quot;telephone&quot;:&quot;01028375678&quot;,&quot;remark&quot;:&quot;这是备注&quot;,&quot;location&quot;:&quot;&quot;,&quot;customer_name&quot;:&quot;客户123&quot;,&quot;lat&quot;:&quot;&quot;}}<br />
-                                headers:Admin-Token:cf028827ae9f491681706ed36f858a71<br />
-                                响应内容：{&quot;code&quot;:0,&quot;data&quot;:{&quot;customerName&quot;:&quot;客户123&quot;,&quot;customerId&quot;:111}}<br />
-                                url:http://192.168.23.135:8090/CrmContacts/addOrUpdate<br />
-                                params{&quot;entity&quot;:{&quot;address&quot;:&quot;北京霍营&quot;,&quot;post&quot;:&quot;总经理&quot;,&quot;next_time&quot;:&quot;2020-04-23 16:03:47&quot;,&quot;name&quot;:&quot;沙漠&quot;,&quot;mobile&quot;:&quot;18098909090&quot;,&quot;telephone&quot;:&quot;01023456789&quot;,&quot;remark&quot;:&quot;这是备注&quot;,&quot;customer_id&quot;:111,&quot;email&quot;:&quot;shddhdd@163.com&quot;}}<br />
-                                headers:Admin-Token:cf028827ae9f491681706ed36f858a71<br />
-                                响应内容：{&quot;code&quot;:0}<br />
-                  </div>
-    
-
-      </td>
-</tr>
-          <tr>
-        <td colspan="3" class="group">com.crm.testcase.AddCustomerTests</td>
-      </tr>
-            
-<tr>
-  <td class="method">
-                  <span class="description" title="正确创建客户">test001_AddCustomer</span>
-      </td>
-  <td class="duration">
-    0.154s
-  </td>
-  <td class="result">
-        
-    
-            <div class="testOutput">
-                        url:http://192.168.23.135:8090/CrmCustomer/addOrUpdate<br />
-                                params{&quot;entity&quot;:{&quot;website&quot;:&quot;http://testfan.cn&quot;,&quot;address&quot;:&quot;北京市,北京城区,昌平区&quot;,&quot;next_time&quot;:&quot;2020-04-02 00:00:00&quot;,&quot;lng&quot;:&quot;&quot;,&quot;mobile&quot;:&quot;18991112345&quot;,&quot;detailAddress&quot;:&quot;霍营地铁&quot;,&quot;telephone&quot;:&quot;01028375678&quot;,&quot;remark&quot;:&quot;这是备注&quot;,&quot;location&quot;:&quot;&quot;,&quot;customer_name&quot;:&quot;客户123&quot;,&quot;lat&quot;:&quot;&quot;}}<br />
-                                headers:Admin-Token:885fd3fa4f494e4b89ffb48e3cd07f1b<br />
-                                响应内容：{&quot;code&quot;:0,&quot;data&quot;:{&quot;customerName&quot;:&quot;客户123&quot;,&quot;customerId&quot;:108}}<br />
-                  </div>
-    
-
-      </td>
-</tr>
-<tr>
-  <td class="method">
-                  <span class="description" title="修改入参中的客户名称">test002_AddCustomer</span>
-      </td>
-  <td class="duration">
-    0.053s
-  </td>
-  <td class="result">
-        
-    
-            <div class="testOutput">
-                        url:http://192.168.23.135:8090/CrmCustomer/addOrUpdate<br />
-                                params{&quot;entity&quot;:{&quot;website&quot;:&quot;http://testfan.cn&quot;,&quot;address&quot;:&quot;北京市,北京城区,昌平区&quot;,&quot;next_time&quot;:&quot;2020-04-02 00:00:00&quot;,&quot;lng&quot;:&quot;&quot;,&quot;mobile&quot;:&quot;18991112345&quot;,&quot;detailAddress&quot;:&quot;霍营地铁&quot;,&quot;telephone&quot;:&quot;01028375678&quot;,&quot;remark&quot;:&quot;这是备注&quot;,&quot;location&quot;:&quot;&quot;,&quot;customer_name&quot;:&quot;客户sly&quot;,&quot;lat&quot;:&quot;&quot;}}<br />
-                                headers:Admin-Token:885fd3fa4f494e4b89ffb48e3cd07f1b<br />
-                                响应内容：{&quot;code&quot;:0,&quot;data&quot;:{&quot;customerName&quot;:&quot;客户sly&quot;,&quot;customerId&quot;:109}}<br />
-                  </div>
-    
-
-      </td>
-</tr>
-<tr>
-  <td class="method">
-                  <span class="description" title="删除入参中的location等多个字段">test003_AddCustomer</span>
-      </td>
-  <td class="duration">
-    0.066s
-  </td>
-  <td class="result">
-        
-    
-            <div class="testOutput">
-                        url:http://192.168.23.135:8090/CrmCustomer/addOrUpdate<br />
-                                params{&quot;entity&quot;:{&quot;website&quot;:&quot;http://testfan.cn&quot;,&quot;address&quot;:&quot;北京市,北京城区,昌平区&quot;,&quot;next_time&quot;:&quot;2020-04-02 00:00:00&quot;,&quot;mobile&quot;:&quot;18991112345&quot;,&quot;detailAddress&quot;:&quot;霍营地铁&quot;,&quot;telephone&quot;:&quot;01028375678&quot;,&quot;remark&quot;:&quot;这是备注&quot;,&quot;customer_name&quot;:&quot;客户123&quot;,&quot;lat&quot;:&quot;&quot;}}<br />
-                                headers:Admin-Token:885fd3fa4f494e4b89ffb48e3cd07f1b<br />
-                                响应内容：{&quot;code&quot;:0,&quot;data&quot;:{&quot;customerName&quot;:&quot;客户123&quot;,&quot;customerId&quot;:110}}<br />
-                  </div>
-    
-
-      </td>
-</tr>
-<tr>
-  <td class="method">
-                  <span class="description" title="客户名称字段缺失">test004_AddCustomer</span>
-      </td>
-  <td class="duration">
-    0.058s
-  </td>
-  <td class="result">
-        
-    
-            <div class="testOutput">
-                        url:http://192.168.23.135:8090/CrmCustomer/addOrUpdate<br />
-                                params{&quot;entity&quot;:{&quot;website&quot;:&quot;http://testfan.cn&quot;,&quot;address&quot;:&quot;北京市,北京城区,昌平区&quot;,&quot;next_time&quot;:&quot;2020-04-02 00:00:00&quot;,&quot;lng&quot;:&quot;&quot;,&quot;mobile&quot;:&quot;18991112345&quot;,&quot;detailAddress&quot;:&quot;霍营地铁&quot;,&quot;telephone&quot;:&quot;01028375678&quot;,&quot;remark&quot;:&quot;这是备注&quot;,&quot;location&quot;:&quot;&quot;,&quot;lat&quot;:&quot;&quot;}}<br />
-                                headers:Admin-Token:885fd3fa4f494e4b89ffb48e3cd07f1b<br />
-                                响应内容：{&quot;code&quot;:500,&quot;msg&quot;:&quot;服务器响应异常&quot;}<br />
-                  </div>
-    
-
-      </td>
-</tr>
-          <tr>
-        <td colspan="3" class="group">com.crm.testcase.DeleteCustomerTests</td>
-      </tr>
-            
-<tr>
-  <td class="method">
-                  <span class="description" title="删除客户——没有任何关联">test001_deleCustomer</span>
-      </td>
-  <td class="duration">
-    0.061s
-  </td>
-  <td class="result">
-        
-    
-            <div class="testOutput">
-                        url:http://192.168.23.135:8090/CrmCustomer/addOrUpdate<br />
-                                params{&quot;entity&quot;:{&quot;website&quot;:&quot;http://testfan.cn&quot;,&quot;address&quot;:&quot;北京市,北京城区,昌平区&quot;,&quot;next_time&quot;:&quot;2020-04-02 00:00:00&quot;,&quot;lng&quot;:&quot;&quot;,&quot;mobile&quot;:&quot;18991112345&quot;,&quot;detailAddress&quot;:&quot;霍营地铁&quot;,&quot;telephone&quot;:&quot;01028375678&quot;,&quot;remark&quot;:&quot;这是备注&quot;,&quot;location&quot;:&quot;&quot;,&quot;customer_name&quot;:&quot;客户123&quot;,&quot;lat&quot;:&quot;&quot;}}<br />
-                                headers:Admin-Token:e209c77065b547839929a559d7386509<br />
-                                响应内容：{&quot;code&quot;:0,&quot;data&quot;:{&quot;customerName&quot;:&quot;客户123&quot;,&quot;customerId&quot;:112}}<br />
-                                url:http://192.168.23.135:8090/CrmCustomer/deleteByIds<br />
-                                参数：customerIds=112<br />
-                                headers：Admin-Token=e209c77065b547839929a559d7386509<br />
-                                响应内容：{&quot;code&quot;:0}<br />
-                  </div>
-    
-
-      </td>
-</tr>
-<tr>
-  <td class="method">
-                  <span class="description" title="删除客户——客户与联系人进行了关联">test002_deleCustomer</span>
-      </td>
-  <td class="duration">
-    0.074s
-  </td>
-  <td class="result">
-        
-    
-            <div class="testOutput">
-                        url:http://192.168.23.135:8090/CrmCustomer/addOrUpdate<br />
-                                params{&quot;entity&quot;:{&quot;website&quot;:&quot;http://testfan.cn&quot;,&quot;address&quot;:&quot;北京市,北京城区,昌平区&quot;,&quot;next_time&quot;:&quot;2020-04-02 00:00:00&quot;,&quot;lng&quot;:&quot;&quot;,&quot;mobile&quot;:&quot;18991112345&quot;,&quot;detailAddress&quot;:&quot;霍营地铁&quot;,&quot;telephone&quot;:&quot;01028375678&quot;,&quot;remark&quot;:&quot;这是备注&quot;,&quot;location&quot;:&quot;&quot;,&quot;customer_name&quot;:&quot;客户123&quot;,&quot;lat&quot;:&quot;&quot;}}<br />
-                                headers:Admin-Token:e209c77065b547839929a559d7386509<br />
-                                响应内容：{&quot;code&quot;:0,&quot;data&quot;:{&quot;customerName&quot;:&quot;客户123&quot;,&quot;customerId&quot;:113}}<br />
-                                url:http://192.168.23.135:8090/CrmContacts/addOrUpdate<br />
-                                params{&quot;entity&quot;:{&quot;address&quot;:&quot;北京霍营&quot;,&quot;post&quot;:&quot;总经理&quot;,&quot;next_time&quot;:&quot;2020-04-23 16:03:47&quot;,&quot;name&quot;:&quot;沙漠&quot;,&quot;mobile&quot;:&quot;18098909090&quot;,&quot;telephone&quot;:&quot;01023456789&quot;,&quot;remark&quot;:&quot;这是备注&quot;,&quot;customer_id&quot;:113,&quot;email&quot;:&quot;shddhdd@163.com&quot;}}<br />
-                                headers:Admin-Token:e209c77065b547839929a559d7386509<br />
-                                响应内容：{&quot;code&quot;:0}<br />
-                                url:http://192.168.23.135:8090/CrmCustomer/deleteByIds<br />
-                                参数：customerIds=113<br />
-                                headers：Admin-Token=e209c77065b547839929a559d7386509<br />
-                                响应内容：{&quot;code&quot;:500,&quot;msg&quot;:&quot;该条数据与其他数据有必要关联，请勿删除&quot;}<br />
-                  </div>
-    
-
-      </td>
-</tr>
-<tr>
-  <td class="method">
-                  <span class="description" title="删除客户——删除多个没有任何关联的客户">test003_deleCustomer</span>
-      </td>
-  <td class="duration">
-    0.076s
-  </td>
-  <td class="result">
-        
-    
-            <div class="testOutput">
-                        url:http://192.168.23.135:8090/CrmCustomer/addOrUpdate<br />
-                                params{&quot;entity&quot;:{&quot;website&quot;:&quot;http://testfan.cn&quot;,&quot;address&quot;:&quot;北京市,北京城区,昌平区&quot;,&quot;next_time&quot;:&quot;2020-04-02 00:00:00&quot;,&quot;lng&quot;:&quot;&quot;,&quot;mobile&quot;:&quot;18991112345&quot;,&quot;detailAddress&quot;:&quot;霍营地铁&quot;,&quot;telephone&quot;:&quot;01028375678&quot;,&quot;remark&quot;:&quot;这是备注&quot;,&quot;location&quot;:&quot;&quot;,&quot;customer_name&quot;:&quot;客户123&quot;,&quot;lat&quot;:&quot;&quot;}}<br />
-                                headers:Admin-Token:e209c77065b547839929a559d7386509<br />
-                                响应内容：{&quot;code&quot;:0,&quot;data&quot;:{&quot;customerName&quot;:&quot;客户123&quot;,&quot;customerId&quot;:114}}<br />
-                                url:http://192.168.23.135:8090/CrmCustomer/addOrUpdate<br />
-                                params{&quot;entity&quot;:{&quot;website&quot;:&quot;http://testfan.cn&quot;,&quot;address&quot;:&quot;北京市,北京城区,昌平区&quot;,&quot;next_time&quot;:&quot;2020-04-02 00:00:00&quot;,&quot;lng&quot;:&quot;&quot;,&quot;mobile&quot;:&quot;18991112345&quot;,&quot;detailAddress&quot;:&quot;霍营地铁&quot;,&quot;telephone&quot;:&quot;01028375678&quot;,&quot;remark&quot;:&quot;这是备注&quot;,&quot;location&quot;:&quot;&quot;,&quot;customer_name&quot;:&quot;客户123&quot;,&quot;lat&quot;:&quot;&quot;}}<br />
-                                headers:Admin-Token:e209c77065b547839929a559d7386509<br />
-                                响应内容：{&quot;code&quot;:0,&quot;data&quot;:{&quot;customerName&quot;:&quot;客户123&quot;,&quot;customerId&quot;:115}}<br />
-                                url:http://192.168.23.135:8090/CrmCustomer/deleteByIds<br />
-                                参数：customerIds=114,115<br />
-                                headers：Admin-Token=e209c77065b547839929a559d7386509<br />
-                                响应内容：{&quot;code&quot;:0}<br />
-                  </div>
-    
-
-      </td>
-</tr>
-<tr>
-  <td class="method">
-                  <span class="description" title="删除客户——删除其他测试中的已经关联的客户">test004_deleCustomer</span>
-      </td>
-  <td class="duration">
-    0.030s
-  </td>
-  <td class="result">
-        
-    
-            <div class="testOutput">
-                        url:http://192.168.23.135:8090/CrmCustomer/deleteByIds<br />
-                                参数：customerIds=111<br />
-                                headers：Admin-Token=e209c77065b547839929a559d7386509<br />
-                                响应内容：{&quot;code&quot;:500,&quot;msg&quot;:&quot;该条数据与其他数据有必要关联，请勿删除&quot;}<br />
-                  </div>
-    
 
       </td>
 </tr>
