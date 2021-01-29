@@ -18,7 +18,7 @@ public class HttpPost {
                 .formParam("password","1234")
                 .log().all()////请求日志
                 .when()//触发条件
-                    .post("http://192.168.23.129:8080/pinter/com/login")
+                    .post("http://192.168.23.135:8080/pinter/com/login")
                 .then()//断言
                     .log().all()//响应日志
                     .statusCode(200)//断言响应状态码200
@@ -33,7 +33,7 @@ public class HttpPost {
                 .contentType(ContentType.JSON)//指定contentType
                 .log().all()//请求日志
                 .when()//触发条件
-                    .post("http://192.168.23.129:8080/pinter/com/register")
+                    .post("http://192.168.23.135:8080/pinter/com/register")
                 .then()//断言
                     .statusCode(200)//断言响应状态码200
                     .log().all()//响应日志

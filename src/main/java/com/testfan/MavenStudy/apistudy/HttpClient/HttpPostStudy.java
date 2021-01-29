@@ -29,7 +29,7 @@ public class HttpPostStudy {
         // 创建一个客户端对象，相当于你的浏览器
         CloseableHttpClient httpClient = HttpClients.createDefault();
         // 创建一个post 对象
-        HttpPost httpPost = new HttpPost("http://192.168.23.129:8080/pinter/com/login");
+        HttpPost httpPost = new HttpPost("http://192.168.23.135:8080/pinter/com/login");
 
         //1、设置请求参数-表单类型参数
         NameValuePair username = new BasicNameValuePair("userName","admin");
@@ -59,7 +59,7 @@ public class HttpPostStudy {
     @Test// 入参是json类型的的post 接口
     public void Post_Json() throws IOException {
         CloseableHttpClient httpClient = HttpClients.createDefault();
-        HttpPost httpPost = new HttpPost("http://192.168.23.129:8080/pinter/com/register");
+        HttpPost httpPost = new HttpPost("http://192.168.23.135:8080/pinter/com/register");
         String jsonString = "{\"userName\":\"test\",\"password\":\"1234\",\"gender\":1,\"phoneNum\":\"110\",\"email\":\"beihe@163.com\",\"address\":\"Beijing\"}";
         // 2.1设置参数
         // 将json字符串转化为一个entity 对象

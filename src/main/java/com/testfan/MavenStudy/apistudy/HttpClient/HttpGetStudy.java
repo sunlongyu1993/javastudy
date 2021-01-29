@@ -20,7 +20,7 @@ public class HttpGetStudy {
         // 创建一个客户端对象，相当于你的浏览器
         CloseableHttpClient httpClient = HttpClients.createDefault();
         // 创建一个get 对象
-        HttpGet httpGet = new HttpGet("http://192.168.23.129/mtx/");
+        HttpGet httpGet = new HttpGet("http://192.168.23.135/mtx/");
         //使用httpclient 对象执行httpget 请求
         CloseableHttpResponse response = httpClient.execute(httpGet);
 
@@ -39,7 +39,7 @@ public class HttpGetStudy {
     @Test
     public void Get_getSku() throws IOException {
         CloseableHttpClient httpClient =HttpClients.createDefault();
-        HttpGet httpGet = new HttpGet("http://192.168.23.129:8080/pinter/com/getSku?id=1");
+        HttpGet httpGet = new HttpGet("http://192.168.23.135:8080/pinter/com/getSku?id=1");
         CloseableHttpResponse response = httpClient.execute(httpGet);
         int statusCode = response.getStatusLine().getStatusCode();
         Assert.assertEquals(statusCode,200);

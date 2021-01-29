@@ -23,7 +23,7 @@ public class MtxShopTest {
                 .formParam("accounts", "slytest")
                 .formParam("pwd", "123456")
                 .when()
-                .post("http://192.168.23.129/mtx/public/index.php?s=/index/user/login.html")
+                .post("http://192.168.23.135/mtx/public/index.php?s=/index/user/login.html")
                 .then()
                 .log().all()
                 .statusCode(200)
@@ -43,7 +43,7 @@ public class MtxShopTest {
                 .multiPart("img_x","")
                 .multiPart("file",new File("C:\\Users\\sunlongyu\\Pictures\\Camera Roll\\1.jpg"),"image/jpg")
                 .when()
-                    .post("http://192.168.23.129/mtx/index.php?s=/index/user/useravatarupload.html")
+                    .post("http://192.168.23.135/mtx/index.php?s=/index/user/useravatarupload.html")
                 .then()
                     .log().all()
                     .statusCode(200);

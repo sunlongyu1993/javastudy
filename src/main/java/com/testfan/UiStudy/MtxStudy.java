@@ -22,7 +22,7 @@ public class MtxStudy {
     @BeforeClass
     public void initDriver(){
         driver =new InitDriver().getDriver("chrome");
-        driver.get("http://192.168.23.129/mtx/");
+        driver.get("http://192.168.23.135/mtx/");
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         String i = RandomUtil.getRndNumByLen(5);

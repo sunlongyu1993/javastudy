@@ -17,7 +17,7 @@ public class HttpGet {
         String str = given()
                 .queryParam("id", "1").log().all()
                 .when()
-                .get("http://192.168.23.129:8080/pinter/com/getSku")
+                .get("http://192.168.23.135:8080/pinter/com/getSku")
                 .then()
                 .log().all()
                 .statusCode(200)
@@ -41,7 +41,7 @@ public class HttpGet {
 //        方式二
         given().queryParam("id", "1").log().all()
                 .when()
-                .get("http://192.168.23.129:8080/pinter/com/getSku")
+                .get("http://192.168.23.135:8080/pinter/com/getSku")
                 .then()
                 .statusCode(200)
                 .body("message",equalTo("success"))

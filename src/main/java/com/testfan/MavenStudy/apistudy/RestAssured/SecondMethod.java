@@ -19,7 +19,7 @@ public class SecondMethod {
         request.queryParam("id","1");
         request.log().all();
         //发起请求
-        Response response = request.get("http://192.168.23.129:8080/pinter/com/getSku");
+        Response response = request.get("http://192.168.23.135:8080/pinter/com/getSku");
         response.then().log().all();
         // 断言
         request.then().statusCode(200);

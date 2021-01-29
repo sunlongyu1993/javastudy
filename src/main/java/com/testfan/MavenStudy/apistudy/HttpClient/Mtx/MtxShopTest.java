@@ -30,7 +30,7 @@ public class MtxShopTest {
 
     @Test// 登录成功
     public void test_001login() throws IOException {
-        HttpPost httpPost = new HttpPost("http://192.168.23.129/mtx/public/index.php?s=/index/user/login.html");
+        HttpPost httpPost = new HttpPost("http://192.168.23.135/mtx/public/index.php?s=/index/user/login.html");
 
         NameValuePair username = new BasicNameValuePair("accounts","slytest");
         NameValuePair pwd = new BasicNameValuePair("pwd","123456");
@@ -54,7 +54,7 @@ public class MtxShopTest {
     //@Test// 上传头像需要特殊处理
     public void test_002upload(){
 //        CloseableHttpClient httpClient = HttpClients.createDefault();
-        HttpPost httpPost = new HttpPost("http://192.168.23.129/mtx/index.php?s=/index/user/useravatarupload.html");
+        HttpPost httpPost = new HttpPost("http://192.168.23.135/mtx/index.php?s=/index/user/useravatarupload.html");
         httpPost.setHeader("X-Requested-With","XMLHttpRequest");
 
         MultipartEntityBuilder builder = MultipartEntityBuilder.create().setMode(HttpMultipartMode.BROWSER_COMPATIBLE);
@@ -68,7 +68,7 @@ public class MtxShopTest {
     }
     @Test(dependsOnMethods = "test_001login")
     public void test003_shop() throws Exception {
-        HttpPost httpPost = new HttpPost("http://192.168.23.129/mtx/index.php?s=/index/cart/save.html");
+        HttpPost httpPost = new HttpPost("http://192.168.23.135/mtx/index.php?s=/index/cart/save.html");
         httpPost.setHeader("X-Requested-With","XMLHttpRequest");
         NameValuePair goods = new BasicNameValuePair("goods_id","8");
         NameValuePair stock = new BasicNameValuePair("stock","1");
@@ -90,7 +90,7 @@ public class MtxShopTest {
     }
     @Test(dependsOnMethods = "test_001login")
     public void test004_order() throws Exception {
-        HttpPost httpPost = new HttpPost("http://192.168.23.129/mtx/index.php?s=/index/buy/add.html");
+        HttpPost httpPost = new HttpPost("http://192.168.23.135/mtx/index.php?s=/index/buy/add.html");
         httpPost.setHeader("X-Requested-With","XMLHttpRequest");
         NameValuePair goods = new BasicNameValuePair("goods_id","5");
         NameValuePair buy_type = new BasicNameValuePair("buy_type","goods");

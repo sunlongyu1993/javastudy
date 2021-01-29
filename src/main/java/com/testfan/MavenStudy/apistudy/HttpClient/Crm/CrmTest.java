@@ -31,7 +31,7 @@ public class CrmTest {
 
     @Test
     public void test001_login() throws Exception {
-        HttpPost httpPost = new HttpPost("http://192.168.23.129:8090/login");
+        HttpPost httpPost = new HttpPost("http://192.168.23.135:8090/login");
         NameValuePair username = new BasicNameValuePair("username", "admin");
         NameValuePair pwd = new BasicNameValuePair("password", "123456");
         List<NameValuePair> params = new ArrayList<>();
@@ -54,7 +54,7 @@ public class CrmTest {
     }
     @Test(dependsOnMethods = "test001_login")
     public void test002_addCustomer() throws Exception {
-        HttpPost httpPost = new HttpPost("http://192.168.23.129:8090/CrmCustomer/addOrUpdate");
+        HttpPost httpPost = new HttpPost("http://192.168.23.135:8090/CrmCustomer/addOrUpdate");
         httpPost.setHeader("Contenty_Type","application/json");
         httpPost.setHeader("Admin-Token",token);
         String params = "{  \"entity\": {\n" +

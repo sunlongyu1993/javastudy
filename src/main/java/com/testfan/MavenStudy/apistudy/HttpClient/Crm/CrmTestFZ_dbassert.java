@@ -33,7 +33,7 @@ public class CrmTestFZ_dbassert {
 
     @BeforeClass
     public void init() throws Exception {
-        ip = "http://192.168.23.129:8090";
+        ip = "http://192.168.23.135:8090";
         header = new HashMap<>();
         // 从数据库中读取内容
 //        String url ="jdbc:mysql://192.168.23.129:3306/crm?characterEncoding=utf8&useSSL=false&zeroDateTimeBehavior=convertToNull&tinyInt1isBit=false";
@@ -55,7 +55,8 @@ public class CrmTestFZ_dbassert {
 
     @Test//登录
     public void test001_login() throws Exception {
-        Map<Object, Object> param = MyPropertisUtil.getAll("src/main/resources/crmparams/mtxreg.properties");
+        Map<Object, Object> param = MyPropertisUtil.getAll("src/main/resources/mtxparams/mtxreg.properties");
+
 //        param.put("username","sly");
 
         String response = MyHttpMethod.PostForm(ip + "/login", param, header);

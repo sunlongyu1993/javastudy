@@ -335,7 +335,7 @@ public class MyHttpMethod {
 //        param.put("id","1");
 //        Map<Object,Object> header =new HashMap<>();
 //
-//        String response = Get("http://192.168.23.129:8080/pinter/com/getSku", param, header);
+//        String response = Get("http://192.168.23.135:8080/pinter/com/getSku", param, header);
 //        System.out.println(response);
         JsonPath from = JsonPath.from(new File("src/main/resources/crmparams/addCustomer.json"));
         System.out.println(from.prettify());

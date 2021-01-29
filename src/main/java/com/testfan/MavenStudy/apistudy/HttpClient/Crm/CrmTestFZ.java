@@ -24,7 +24,7 @@ public class CrmTestFZ {
     String token;
     @BeforeClass
     public void init(){
-        ip = "http://192.168.23.129:8090";
+        ip = "http://192.168.23.135:8090";
         header = new HashMap<>();
     }
 
@@ -33,7 +33,7 @@ public class CrmTestFZ {
 //        Map<Object,Object> param =  param = new HashMap<>();
 //        param.put("username", "admin");
 //        param.put("password", "123456");
-        Map<Object, Object> param = MyPropertisUtil.getAll("src/main/resources/crmparams/mtxreg.properties");
+        Map<Object, Object> param = MyPropertisUtil.getAll("src/main/resources/mtxparams/mtxreg.properties");
         String response = MyHttpMethod.PostForm(ip + "/login", param, header);
         int statusCode = MyHttpMethod.getStatusCode();
         Assert.assertEquals(statusCode,200);

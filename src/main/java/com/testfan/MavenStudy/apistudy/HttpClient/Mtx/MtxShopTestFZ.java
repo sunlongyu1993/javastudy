@@ -19,7 +19,7 @@ public class MtxShopTestFZ {
 
     @BeforeClass
     public void init(){
-        ip ="http://192.168.23.129";
+        ip ="http://192.168.23.135";
         param = new HashMap<>();
         header = new HashMap<>();
         header.put("X-Requested-With","XMLHttpRequest");

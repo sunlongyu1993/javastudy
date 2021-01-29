@@ -19,7 +19,7 @@ public class CrmTest {
                 .formParam("password", "123456")
                 .log().all()
                 .when()
-                .post("http://192.168.23.129:8090/login")
+                .post("http://192.168.23.135:8090/login")
                 .then()
                 .log().all()
                 .statusCode(200)
@@ -50,7 +50,7 @@ public class CrmTest {
                 .header("Admin-Token",token)
                 .log().all()
                 .when()
-                    .post("http://192.168.23.129:8090/CrmCustomer/addOrUpdate")
+                    .post("http://192.168.23.135:8090/CrmCustomer/addOrUpdate")
                 .then()
                 .log().all()
                 .statusCode(200);

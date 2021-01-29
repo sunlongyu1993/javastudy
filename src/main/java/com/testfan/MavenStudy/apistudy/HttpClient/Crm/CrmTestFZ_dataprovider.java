@@ -33,7 +33,7 @@ public class CrmTestFZ_dataprovider {
 
     @BeforeClass
     public void init(){
-        ip = "http://192.168.23.129:8090";
+        ip = "http://192.168.23.135:8090";
         header = new HashMap<>();
     }
 
@@ -50,7 +50,7 @@ public class CrmTestFZ_dataprovider {
 
     @Test//登录
     public void test001_login() throws Exception {
-        Map<Object, Object> param = MyPropertisUtil.getAll("src/main/resources/crmparams/mtxreg.properties");
+        Map<Object, Object> param = MyPropertisUtil.getAll("src/main/resources/mtxparams/mtxreg.properties");
 //        param.put("username","sly");
 
         String response = MyHttpMethod.PostForm(ip + "/login", param, header);
