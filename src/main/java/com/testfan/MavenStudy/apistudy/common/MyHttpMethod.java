@@ -316,7 +316,7 @@ public class MyHttpMethod {
         Header[] header = response.getHeaders(headername);
         return header;
     }
-
+//重定向：获取重定向接口的返回值，如果是302，再获取location，拿到新的接口地址，重新发起HTTP请求，
 
 
 
