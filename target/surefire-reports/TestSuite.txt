@@ -1,0 +1,32 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 32, Failures: 6, Errors: 0, Skipped: 25, Time elapsed: 52.517 s <<< FAILURE! - in TestSuite
+init(com.crm.testcase.AddContactsTests)  Time elapsed: 24.087 s  <<< FAILURE!
+org.apache.http.conn.HttpHostConnectException: Connect to 192.168.23.135:8090 [/192.168.23.135] failed: Connection timed out: connect
+Caused by: java.net.ConnectException: Connection timed out: connect
+
+test01_lottery(com.dubbo.dubbotest.lotterytest.DubboTests)  Time elapsed: 5.613 s  <<< FAILURE!
+com.alibaba.dubbo.rpc.RpcException: Fail to create remoting client for service(dubbo://192.168.23.135:20880/cn.testfan.dubbo.service.MarketService?application=test&codec=dubbo&dubbo=2.0.2&generic=true&heartbeat=60000&interface=/cn.testfan.dubbo.service.MarketService&pid=8304&register.ip=192.168.56.1&side=consumer&timeout=20000&timestamp=1613192049267&version=1.0): client(url: dubbo://192.168.23.135:20880/cn.testfan.dubbo.service.MarketService?application=test&codec=dubbo&dubbo=2.0.2&generic=true&heartbeat=60000&interface=/cn.testfan.dubbo.service.MarketService&pid=8304&register.ip=192.168.56.1&side=consumer&timeout=20000&timestamp=1613192049267&version=1.0) failed to connect to server /192.168.23.135:20880 client-side timeout 3000ms (elapsed: 4707ms) from netty client 192.168.56.1 using dubbo version 2.6.9
+	at com.dubbo.dubbotest.lotterytest.DubboTests.test01_lottery(DubboTests.java:20)
+Caused by: com.alibaba.dubbo.remoting.RemotingException: client(url: dubbo://192.168.23.135:20880/cn.testfan.dubbo.service.MarketService?application=test&codec=dubbo&dubbo=2.0.2&generic=true&heartbeat=60000&interface=/cn.testfan.dubbo.service.MarketService&pid=8304&register.ip=192.168.56.1&side=consumer&timeout=20000&timestamp=1613192049267&version=1.0) failed to connect to server /192.168.23.135:20880 client-side timeout 3000ms (elapsed: 4707ms) from netty client 192.168.56.1 using dubbo version 2.6.9
+	at com.dubbo.dubbotest.lotterytest.DubboTests.test01_lottery(DubboTests.java:20)
+
+test02_lottery(com.dubbo.dubbotest.lotterytest.DubboTests)  Time elapsed: 0.006 s  <<< FAILURE!
+java.lang.NullPointerException
+	at com.dubbo.dubbotest.lotterytest.DubboTests.test02_lottery(DubboTests.java:37)
+
+test03_lottery(com.dubbo.dubbotest.lotterytest.DubboTests)  Time elapsed: 0.009 s  <<< FAILURE!
+java.lang.NullPointerException
+	at com.dubbo.dubbotest.lotterytest.DubboTests.test03_lottery(DubboTests.java:47)
+
+test04_lottery(com.dubbo.dubbotest.lotterytest.DubboTests)  Time elapsed: 0.006 s  <<< FAILURE!
+java.lang.NullPointerException
+	at com.dubbo.dubbotest.lotterytest.DubboTests.test04_lottery(DubboTests.java:57)
+
+test001_login(com.crm.testcase.LoginTests)  Time elapsed: 21.021 s  <<< FAILURE!
+org.apache.http.conn.HttpHostConnectException: Connect to 192.168.23.135:8090 [/192.168.23.135] failed: Connection timed out: connect
+	at com.crm.testcase.LoginTests.test001_login(LoginTests.java:20)
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at com.crm.testcase.LoginTests.test001_login(LoginTests.java:20)
+

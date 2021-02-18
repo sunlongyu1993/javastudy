@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" verbose="0" name="Failed suite [Surefire suite]">
+  <test thread-count="1" verbose="0" name="Surefire test(failed)">
+    <classes>
+      <class name="com.crm.testcase.DataDriverTests">
+        <methods>
+          <include name="init"/>
+          <include name="afterclass"/>
+          <include name="Test"/>
+        </methods>
+      </class> <!-- com.crm.testcase.DataDriverTests -->
+      <class name="com.crm.testcase.DeleteCustomerTests">
+        <methods>
+          <include name="test003_deleCustomer"/>
+          <include name="test004_deleCustomer"/>
+          <include name="test001_deleCustomer"/>
+          <include name="init"/>
+          <include name="afterclass"/>
+          <include name="test002_deleCustomer"/>
+        </methods>
+      </class> <!-- com.crm.testcase.DeleteCustomerTests -->
+      <class name="com.crm.testcase.AddCustomerTests">
+        <methods>
+          <include name="init"/>
+          <include name="test002_AddCustomer"/>
+          <include name="test004_AddCustomer"/>
+          <include name="afterclass"/>
+          <include name="test001_AddCustomer"/>
+          <include name="test003_AddCustomer"/>
+        </methods>
+      </class> <!-- com.crm.testcase.AddCustomerTests -->
+      <class name="com.dubbo.dubbotest.lotterytest.DubboTests">
+        <methods>
+          <include name="test01_lottery"/>
+          <include name="test04_lottery"/>
+          <include name="test02_lottery"/>
+          <include name="test03_lottery"/>
+        </methods>
+      </class> <!-- com.dubbo.dubbotest.lotterytest.DubboTests -->
+      <class name="com.crm.testcase.AddContactsTests">
+        <methods>
+          <include name="test005_AddContacts"/>
+          <include name="test001_AddContacts"/>
+          <include name="test002_AddContacts"/>
+          <include name="test006_AddContacts"/>
+          <include name="init"/>
+          <include name="test003_AddContacts"/>
+          <include name="afterclass"/>
+          <include name="test004_AddContacts"/>
+        </methods>
+      </class> <!-- com.crm.testcase.AddContactsTests -->
+      <class name="com.crm.testcase.LoginTests">
+        <methods>
+          <include name="test001_login"/>
+        </methods>
+      </class> <!-- com.crm.testcase.LoginTests -->
+    </classes>
+  </test> <!-- Surefire test(failed) -->
+</suite> <!-- Failed suite [Surefire suite] -->

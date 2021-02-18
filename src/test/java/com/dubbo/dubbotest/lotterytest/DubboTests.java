@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
  * @version 20210127
  */
 public class DubboTests {
-    String url = "dubbo://192.168.23.135:20880";
+    String url = "dubbo://192.168.0.103:20880";
     String interfaceName = "/cn.testfan.dubbo.service.MarketService";
     String version = "1.0";
 

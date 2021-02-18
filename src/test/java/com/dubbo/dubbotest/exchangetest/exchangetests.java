@@ -33,7 +33,7 @@ public class exchangetests {
         pramsjson.put("activityId",2);
         pramsjson.put("awardId",4);
         pramsjson.put("exchangeNum",1);
-        Object response = service.$invoke("exchange", prams, pramvalue);
+            Object response = service.$invoke("exchange", prams, pramvalue);
 
         //解析dubbo返回值——转化为map 对象
         Map<String,Object> resmaps = (Map<String, Object>) response;

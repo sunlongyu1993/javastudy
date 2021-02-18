@@ -231,6 +231,27 @@
       <artifactId>zkclient</artifactId>
       <version>0.11</version>
     </dependency>
+    <dependency>
+      <groupId>commons-codec</groupId>
+      <artifactId>commons-codec</artifactId>
+      <version>1.11</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.jmeter</groupId>
+      <artifactId>ApacheJMeter_core</artifactId>
+      <version>5.3</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.jmeter</groupId>
+      <artifactId>ApacheJMeter_functions</artifactId>
+      <version>5.3</version>
+    </dependency>
+<!--    <dependency>-->
+<!--      <groupId>commons-codec</groupId>-->
+<!--      <artifactId>commons-codec</artifactId>-->
+<!--      <version>1.15</version>-->
+<!--    </dependency>-->
 
 
   </dependencies>
