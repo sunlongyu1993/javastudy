@@ -24,5 +24,4 @@
     <mappers>
         <mapper resource="com/testfan/Mybatiss/dao/IUserDao.xml"/>
    </mappers>
-
 </configuration>
