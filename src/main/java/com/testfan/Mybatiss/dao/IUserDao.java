@@ -1,6 +1,7 @@
 package com.testfan.Mybatiss.dao;
 
 import com.testfan.Mybatiss.domain.User;
+import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
 
@@ -9,6 +10,16 @@ import java.util.List;
  * @version 20210218
  * 用户的持久层接口
  */
+//不使用注解
 public interface IUserDao {
     List<User> findAll();
 }
+
+
+
+//使用注解
+//public interface IUserDao {
+//
+//    @Select("select * from user")
+//    List<User> findAll();
+//}
