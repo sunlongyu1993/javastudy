@@ -5017,3 +5017,87 @@ return extension.getValidator(arg0);
 [crazyapi] 2021/02/13 19:53:57   INFO DubboShutdownHook com.alibaba.dubbo.remoting.transport.netty4.NettyChannel:139 -  [DUBBO] Close netty channel [id: 0xf852dbec, L:/192.168.0.106:63367 - R:/192.168.0.103:20880], dubbo version: 2.6.9, current host: 192.168.56.1 
 [crazyapi] 2021/02/13 19:53:57   INFO DubboShutdownHook com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol:460 -  [DUBBO] Close dubbo connect: 192.168.56.1:0-->192.168.0.103:20880, dubbo version: 2.6.9, current host: 192.168.56.1 
 [crazyapi] 2021/02/13 19:53:57   INFO DubboShutdownHook com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol:63 -  [DUBBO] Destroy reference: dubbo://192.168.0.103:20880/cn.testfan.dubbo.service.MarketService?application=test&dubbo=2.0.2&generic=true&interface=/cn.testfan.dubbo.service.MarketService&pid=9340&register.ip=192.168.56.1&side=consumer&timeout=20000&timestamp=1613217232910&version=1.0, dubbo version: 2.6.9, current host: 192.168.56.1 
+[crazyapi] 2021/02/19 16:56:56  DEBUG main org.apache.ibatis.logging.LogFactory:105 - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter. 
+[crazyapi] 2021/02/19 16:56:56  DEBUG main org.apache.ibatis.datasource.pooled.PooledDataSource:363 - PooledDataSource forcefully closed/removed all connections. 
+[crazyapi] 2021/02/19 16:56:56  DEBUG main org.apache.ibatis.datasource.pooled.PooledDataSource:363 - PooledDataSource forcefully closed/removed all connections. 
+[crazyapi] 2021/02/19 16:56:56  DEBUG main org.apache.ibatis.datasource.pooled.PooledDataSource:363 - PooledDataSource forcefully closed/removed all connections. 
+[crazyapi] 2021/02/19 16:56:56  DEBUG main org.apache.ibatis.datasource.pooled.PooledDataSource:363 - PooledDataSource forcefully closed/removed all connections. 
+[crazyapi] 2021/02/19 16:56:56  DEBUG main org.apache.ibatis.transaction.jdbc.JdbcTransaction:137 - Opening JDBC Connection 
+[crazyapi] 2021/02/19 16:56:56  DEBUG main org.apache.ibatis.datasource.pooled.PooledDataSource:434 - Created connection 741730375. 
+[crazyapi] 2021/02/19 16:56:56  DEBUG main org.apache.ibatis.transaction.jdbc.JdbcTransaction:101 - Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2c35e847] 
+[crazyapi] 2021/02/19 16:56:56  DEBUG main com.testfan.Mybatiss.dao.IUserDao.findAll:137 - ==>  Preparing: select * from user 
+[crazyapi] 2021/02/19 16:56:56  DEBUG main com.testfan.Mybatiss.dao.IUserDao.findAll:137 - ==> Parameters:  
+[crazyapi] 2021/02/19 16:56:56  DEBUG main com.testfan.Mybatiss.dao.IUserDao.findAll:137 - <==      Total: 20 
+[crazyapi] 2021/02/19 16:56:56  DEBUG main org.apache.ibatis.transaction.jdbc.JdbcTransaction:123 - Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2c35e847] 
+[crazyapi] 2021/02/19 16:56:56  DEBUG main org.apache.ibatis.transaction.jdbc.JdbcTransaction:91 - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2c35e847] 
+[crazyapi] 2021/02/19 16:56:56  DEBUG main org.apache.ibatis.datasource.pooled.PooledDataSource:391 - Returned connection 741730375 to pool. 
+[crazyapi] 2021/02/19 16:59:21  DEBUG main org.apache.ibatis.logging.LogFactory:105 - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter. 
+[crazyapi] 2021/02/19 16:59:21  DEBUG main org.apache.ibatis.datasource.pooled.PooledDataSource:363 - PooledDataSource forcefully closed/removed all connections. 
+[crazyapi] 2021/02/19 16:59:21  DEBUG main org.apache.ibatis.datasource.pooled.PooledDataSource:363 - PooledDataSource forcefully closed/removed all connections. 
+[crazyapi] 2021/02/19 16:59:21  DEBUG main org.apache.ibatis.datasource.pooled.PooledDataSource:363 - PooledDataSource forcefully closed/removed all connections. 
+[crazyapi] 2021/02/19 16:59:21  DEBUG main org.apache.ibatis.datasource.pooled.PooledDataSource:363 - PooledDataSource forcefully closed/removed all connections. 
+[crazyapi] 2021/02/19 16:59:21  DEBUG main org.apache.ibatis.transaction.jdbc.JdbcTransaction:137 - Opening JDBC Connection 
+[crazyapi] 2021/02/19 16:59:22  DEBUG main org.apache.ibatis.datasource.pooled.PooledDataSource:434 - Created connection 741730375. 
+[crazyapi] 2021/02/19 16:59:22  DEBUG main org.apache.ibatis.transaction.jdbc.JdbcTransaction:101 - Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2c35e847] 
+[crazyapi] 2021/02/19 16:59:22  DEBUG main com.testfan.Mybatiss.dao.IUserDao.findAll:137 - ==>  Preparing: select * from user 
+[crazyapi] 2021/02/19 16:59:22  DEBUG main com.testfan.Mybatiss.dao.IUserDao.findAll:137 - ==> Parameters:  
+[crazyapi] 2021/02/19 16:59:22  DEBUG main com.testfan.Mybatiss.dao.IUserDao.findAll:137 - <==      Total: 20 
+[crazyapi] 2021/02/19 16:59:22  DEBUG main org.apache.ibatis.transaction.jdbc.JdbcTransaction:123 - Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2c35e847] 
+[crazyapi] 2021/02/19 16:59:22  DEBUG main org.apache.ibatis.transaction.jdbc.JdbcTransaction:91 - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2c35e847] 
+[crazyapi] 2021/02/19 16:59:22  DEBUG main org.apache.ibatis.datasource.pooled.PooledDataSource:391 - Returned connection 741730375 to pool. 
+[crazyapi] 2021/02/19 17:00:37  DEBUG main org.apache.ibatis.logging.LogFactory:105 - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter. 
+[crazyapi] 2021/02/19 17:00:37  DEBUG main org.apache.ibatis.datasource.pooled.PooledDataSource:363 - PooledDataSource forcefully closed/removed all connections. 
+[crazyapi] 2021/02/19 17:00:37  DEBUG main org.apache.ibatis.datasource.pooled.PooledDataSource:363 - PooledDataSource forcefully closed/removed all connections. 
+[crazyapi] 2021/02/19 17:00:37  DEBUG main org.apache.ibatis.datasource.pooled.PooledDataSource:363 - PooledDataSource forcefully closed/removed all connections. 
+[crazyapi] 2021/02/19 17:00:37  DEBUG main org.apache.ibatis.datasource.pooled.PooledDataSource:363 - PooledDataSource forcefully closed/removed all connections. 
+[crazyapi] 2021/02/19 17:00:37  DEBUG main org.apache.ibatis.transaction.jdbc.JdbcTransaction:137 - Opening JDBC Connection 
+[crazyapi] 2021/02/19 17:00:37  DEBUG main org.apache.ibatis.datasource.pooled.PooledDataSource:434 - Created connection 741730375. 
+[crazyapi] 2021/02/19 17:00:37  DEBUG main org.apache.ibatis.transaction.jdbc.JdbcTransaction:101 - Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2c35e847] 
+[crazyapi] 2021/02/19 17:00:37  DEBUG main com.testfan.Mybatiss.dao.IUserDao.findAll:137 - ==>  Preparing: select * from user 
+[crazyapi] 2021/02/19 17:00:37  DEBUG main com.testfan.Mybatiss.dao.IUserDao.findAll:137 - ==> Parameters:  
+[crazyapi] 2021/02/19 17:00:37  DEBUG main com.testfan.Mybatiss.dao.IUserDao.findAll:137 - <==      Total: 20 
+[crazyapi] 2021/02/19 17:00:37  DEBUG main org.apache.ibatis.transaction.jdbc.JdbcTransaction:123 - Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2c35e847] 
+[crazyapi] 2021/02/19 17:00:37  DEBUG main org.apache.ibatis.transaction.jdbc.JdbcTransaction:91 - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2c35e847] 
+[crazyapi] 2021/02/19 17:00:37  DEBUG main org.apache.ibatis.datasource.pooled.PooledDataSource:391 - Returned connection 741730375 to pool. 
+[crazyapi] 2021/02/19 17:01:33  DEBUG main org.apache.ibatis.logging.LogFactory:105 - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter. 
+[crazyapi] 2021/02/19 17:01:33  DEBUG main org.apache.ibatis.datasource.pooled.PooledDataSource:363 - PooledDataSource forcefully closed/removed all connections. 
+[crazyapi] 2021/02/19 17:01:33  DEBUG main org.apache.ibatis.datasource.pooled.PooledDataSource:363 - PooledDataSource forcefully closed/removed all connections. 
+[crazyapi] 2021/02/19 17:01:33  DEBUG main org.apache.ibatis.datasource.pooled.PooledDataSource:363 - PooledDataSource forcefully closed/removed all connections. 
+[crazyapi] 2021/02/19 17:01:33  DEBUG main org.apache.ibatis.datasource.pooled.PooledDataSource:363 - PooledDataSource forcefully closed/removed all connections. 
+[crazyapi] 2021/02/19 17:01:33  DEBUG main org.apache.ibatis.transaction.jdbc.JdbcTransaction:137 - Opening JDBC Connection 
+[crazyapi] 2021/02/19 17:01:34  DEBUG main org.apache.ibatis.datasource.pooled.PooledDataSource:434 - Created connection 741730375. 
+[crazyapi] 2021/02/19 17:01:34  DEBUG main org.apache.ibatis.transaction.jdbc.JdbcTransaction:101 - Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2c35e847] 
+[crazyapi] 2021/02/19 17:01:34  DEBUG main com.testfan.Mybatiss.dao.IUserDao.findAll:137 - ==>  Preparing: select * from user 
+[crazyapi] 2021/02/19 17:01:34  DEBUG main com.testfan.Mybatiss.dao.IUserDao.findAll:137 - ==> Parameters:  
+[crazyapi] 2021/02/19 17:01:34  DEBUG main com.testfan.Mybatiss.dao.IUserDao.findAll:137 - <==      Total: 20 
+[crazyapi] 2021/02/19 17:01:34  DEBUG main org.apache.ibatis.transaction.jdbc.JdbcTransaction:123 - Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2c35e847] 
+[crazyapi] 2021/02/19 17:01:34  DEBUG main org.apache.ibatis.transaction.jdbc.JdbcTransaction:91 - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2c35e847] 
+[crazyapi] 2021/02/19 17:01:34  DEBUG main org.apache.ibatis.datasource.pooled.PooledDataSource:391 - Returned connection 741730375 to pool. 
+[crazyapi] 2021/02/19 17:02:35  DEBUG main org.apache.ibatis.logging.LogFactory:105 - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter. 
+[crazyapi] 2021/02/19 17:02:35  DEBUG main org.apache.ibatis.datasource.pooled.PooledDataSource:363 - PooledDataSource forcefully closed/removed all connections. 
+[crazyapi] 2021/02/19 17:02:35  DEBUG main org.apache.ibatis.datasource.pooled.PooledDataSource:363 - PooledDataSource forcefully closed/removed all connections. 
+[crazyapi] 2021/02/19 17:02:35  DEBUG main org.apache.ibatis.datasource.pooled.PooledDataSource:363 - PooledDataSource forcefully closed/removed all connections. 
+[crazyapi] 2021/02/19 17:02:35  DEBUG main org.apache.ibatis.datasource.pooled.PooledDataSource:363 - PooledDataSource forcefully closed/removed all connections. 
+[crazyapi] 2021/02/19 17:02:35  DEBUG main org.apache.ibatis.transaction.jdbc.JdbcTransaction:137 - Opening JDBC Connection 
+[crazyapi] 2021/02/19 17:02:36  DEBUG main org.apache.ibatis.datasource.pooled.PooledDataSource:434 - Created connection 1567705314. 
+[crazyapi] 2021/02/19 17:02:36  DEBUG main org.apache.ibatis.transaction.jdbc.JdbcTransaction:101 - Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5d7148e2] 
+[crazyapi] 2021/02/19 17:02:36  DEBUG main com.testfan.Mybatiss.dao.IUserDao.findAll:137 - ==>  Preparing: select * from user 
+[crazyapi] 2021/02/19 17:02:36  DEBUG main com.testfan.Mybatiss.dao.IUserDao.findAll:137 - ==> Parameters:  
+[crazyapi] 2021/02/19 17:02:36  DEBUG main com.testfan.Mybatiss.dao.IUserDao.findAll:137 - <==      Total: 20 
+[crazyapi] 2021/02/19 17:02:36  DEBUG main org.apache.ibatis.transaction.jdbc.JdbcTransaction:123 - Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5d7148e2] 
+[crazyapi] 2021/02/19 17:02:36  DEBUG main org.apache.ibatis.transaction.jdbc.JdbcTransaction:91 - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5d7148e2] 
+[crazyapi] 2021/02/19 17:02:36  DEBUG main org.apache.ibatis.datasource.pooled.PooledDataSource:391 - Returned connection 1567705314 to pool. 
+[crazyapi] 2021/02/19 17:03:57  DEBUG main org.apache.ibatis.logging.LogFactory:105 - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter. 
+[crazyapi] 2021/02/19 17:03:57  DEBUG main org.apache.ibatis.datasource.pooled.PooledDataSource:363 - PooledDataSource forcefully closed/removed all connections. 
+[crazyapi] 2021/02/19 17:03:57  DEBUG main org.apache.ibatis.datasource.pooled.PooledDataSource:363 - PooledDataSource forcefully closed/removed all connections. 
+[crazyapi] 2021/02/19 17:03:57  DEBUG main org.apache.ibatis.datasource.pooled.PooledDataSource:363 - PooledDataSource forcefully closed/removed all connections. 
+[crazyapi] 2021/02/19 17:03:57  DEBUG main org.apache.ibatis.datasource.pooled.PooledDataSource:363 - PooledDataSource forcefully closed/removed all connections. 
+[crazyapi] 2021/02/19 17:03:58  DEBUG main org.apache.ibatis.transaction.jdbc.JdbcTransaction:137 - Opening JDBC Connection 
+[crazyapi] 2021/02/19 17:03:58  DEBUG main org.apache.ibatis.datasource.pooled.PooledDataSource:434 - Created connection 741730375. 
+[crazyapi] 2021/02/19 17:03:58  DEBUG main org.apache.ibatis.transaction.jdbc.JdbcTransaction:101 - Setting autocommit to false on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2c35e847] 
+[crazyapi] 2021/02/19 17:03:58  DEBUG main com.testfan.Mybatiss.dao.IUserDao.findAll:137 - ==>  Preparing: select * from user 
+[crazyapi] 2021/02/19 17:03:58  DEBUG main com.testfan.Mybatiss.dao.IUserDao.findAll:137 - ==> Parameters:  
+[crazyapi] 2021/02/19 17:03:58  DEBUG main com.testfan.Mybatiss.dao.IUserDao.findAll:137 - <==      Total: 20 
+[crazyapi] 2021/02/19 17:03:58  DEBUG main org.apache.ibatis.transaction.jdbc.JdbcTransaction:123 - Resetting autocommit to true on JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2c35e847] 
+[crazyapi] 2021/02/19 17:03:58  DEBUG main org.apache.ibatis.transaction.jdbc.JdbcTransaction:91 - Closing JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@2c35e847] 
+[crazyapi] 2021/02/19 17:03:58  DEBUG main org.apache.ibatis.datasource.pooled.PooledDataSource:391 - Returned connection 741730375 to pool. 

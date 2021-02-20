@@ -11,15 +11,15 @@ import java.util.Date;
 // 实体类
 public class User implements Serializable {
     private Integer id;
-    private String username;
+    private String user_name;
     private String password;
     private Integer age;
     private Integer gender;
-    private String phonenum;
+    private String phone_num;
     private String email;
     private String address;
-    private Date createtime;
-    private Data updatatime;
+    private Date create_time;
+    private Date update_time;
 
     public Integer getId() {
         return id;
@@ -29,12 +29,12 @@ public class User implements Serializable {
         this.id = id;
     }
 
-    public String getUsername() {
-        return username;
+    public String getUser_name() {
+        return user_name;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setUser_name(String user_name) {
+        this.user_name = user_name;
     }
 
     public String getPassword() {
@@ -61,12 +61,12 @@ public class User implements Serializable {
         this.gender = gender;
     }
 
-    public String getPhonenum() {
-        return phonenum;
+    public String getPhone_num() {
+        return phone_num;
     }
 
-    public void setPhonenum(String phonenum) {
-        this.phonenum = phonenum;
+    public void setPhone_num(String phone_num) {
+        this.phone_num = phone_num;
     }
 
     public String getEmail() {
@@ -85,35 +85,35 @@ public class User implements Serializable {
         this.address = address;
     }
 
-    public Date getCreatetime() {
-        return createtime;
+    public Date getCreate_time() {
+        return create_time;
     }
 
-    public void setCreatetime(Date createtime) {
-        this.createtime = createtime;
+    public void setCreate_time(Date create_time) {
+        this.create_time = create_time;
     }
 
-    public Data getUpdatatime() {
-        return updatatime;
+    public Date getUpdate_time() {
+        return update_time;
     }
 
-    public void setUpdatatime(Data updatatime) {
-        this.updatatime = updatatime;
+    public void setUpdate_time(Date update_time) {
+        this.update_time = update_time;
     }
 
     @Override
     public String toString() {
-        return "domin{" +
+        return "User{" +
                 "id=" + id +
-                ", username='" + username + '\'' +
+                ", user_name='" + user_name + '\'' +
                 ", password='" + password + '\'' +
                 ", age=" + age +
                 ", gender=" + gender +
-                ", phonenum='" + phonenum + '\'' +
+                ", phone_num='" + phone_num + '\'' +
                 ", email='" + email + '\'' +
                 ", address='" + address + '\'' +
-                ", createtime=" + createtime +
-                ", updatatime=" + updatatime +
+                ", create_time=" + create_time +
+                ", update_time=" + update_time +
                 '}';
     }
 }
