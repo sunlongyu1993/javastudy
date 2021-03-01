@@ -7,4 +7,8 @@ package com.testfan.javastudy.Day0301.Demo01;
 public interface MyInterfaceA {
     public abstract void methodA();
     public abstract void Commonmethod();
+
+    public default void methodDefault(){
+        System.out.println("接口中默认方法AAA");
+    }
 }

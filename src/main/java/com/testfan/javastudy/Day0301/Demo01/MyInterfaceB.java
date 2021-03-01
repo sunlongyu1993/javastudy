@@ -8,4 +8,8 @@ public interface MyInterfaceB {
     public abstract void methodB();
     public abstract void Commonmethod();
 
+    public default void methodDefault(){
+        System.out.println("接口中默认方法BBB");
+    }
+
 }
