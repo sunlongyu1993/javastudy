@@ -6,5 +6,6 @@ package com.testfan.javastudy.Day0304.Demo05;
  * 匿名内部类
  */
 public interface MyInterface {
-    void methodAbs();//抽象方法
+    void methodAbsA();//抽象方法
+    void methodAbsB();
 }
