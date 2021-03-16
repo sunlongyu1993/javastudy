@@ -3,7 +3,7 @@ package com.testfan.javastudy.Day0315.Demo04;
 /**
  * @author 孙珑瑜
  */
-public class Demo05GenericClass {
+public class Demo01GenericClass {
     public static void main(String[] args) {
         GenericClass genericClass = new GenericClass();
         genericClass.setName("zifuchuan");

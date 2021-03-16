@@ -6,6 +6,7 @@ package com.testfan.javastudy.Day0315.Demo04;
  */
 public class MainTest {
     public static void main(String[] args) {
-
+        demo02GenericMethod gemethod = new demo02GenericMethod();
+        gemethod.method("ssss");
     }
 }
