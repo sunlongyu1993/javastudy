@@ -1,4 +1,6 @@
-package com.testfan.javastudy.Day0317.Demo03;
+package com.testfan.javastudy.Day0317.Demo04;
+
+import java.util.Objects;
 
 /**
  * @author 孙珑瑜
@@ -38,5 +40,20 @@ public class Person {
                 "age=" + age +
                 ", name='" + name + '\'' +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {return true;}
+        if (o == null || getClass() != o.getClass())
+        { return false;}
+        Person person = (Person) o;
+        return age == person.age &&
+                Objects.equals(name, person.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(age, name);
     }
 }
