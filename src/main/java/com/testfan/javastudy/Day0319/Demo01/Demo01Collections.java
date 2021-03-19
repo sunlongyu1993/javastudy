@@ -26,13 +26,13 @@ public class Demo01Collections {
 //        Collections.addAll(liststr,"a","c","d","e","b");
 //        Collections.sort(liststr);
 //        System.out.println(liststr);
-        ArrayList<Person > listPerson = new ArrayList<>();
-        listPerson.add(new Person(18,"张三"));
-        listPerson.add(new Person(25,"李四"));
-        listPerson.add(new Person(20,"王五"));
-
-        System.out.println(listPerson);
-        Collections.sort(listPerson);
-        System.out.println(listPerson);
+//        ArrayList<Person > listPerson = new ArrayList<>();
+//        listPerson.add(new Person(18,"张三"));
+//        listPerson.add(new Person(25,"李四"));
+//        listPerson.add(new Person(20,"王五"));
+//
+//        System.out.println(listPerson);
+//        Collections.sort(listPerson);
+//        System.out.println(listPerson);
     }
 }
