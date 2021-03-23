@@ -27,6 +27,10 @@ public class MapTest1 {
         }
         System.out.println(strmap);
 
+        print();
+    }
 
+    private static void print() {
+        System.out.println("dfasdfasf");
     }
 }
