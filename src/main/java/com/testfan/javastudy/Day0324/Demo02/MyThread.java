@@ -1,4 +1,10 @@
 package com.testfan.javastudy.Day0324.Demo02;
 
-public class MyThread {
+public class MyThread extends Thread{
+    @Override
+    public void run() {
+        for (int i = 0; i < 20; i++) {
+            System.out.println("run:"+i);
+        }
+    }
 }
