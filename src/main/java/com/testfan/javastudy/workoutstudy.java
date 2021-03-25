@@ -1,5 +1,7 @@
 package com.testfan.javastudy;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Calendar;
 import java.util.HashMap;
@@ -11,6 +13,15 @@ import java.util.Map;
  */
 public class workoutstudy {
     public static void main(String[] args) throws IOException {
+//        try {
+//            BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("D:\\output.txt",true));
+//            bufferedWriter.write(line);
+//            bufferedWriter.newLine();
+//            bufferedWriter.close();
+//        }
+//        catch (Exception e){
+//            e.printStackTrace();
+//        }
 //        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 //        System.out.println("请在控制台输入字符：");
 //        char c;
