@@ -10,6 +10,10 @@ public class Demo01MainThread {
         Thread t = new Thread(runnable);
         t.start();//新线程
 
+        RunnableImpl2 runnableImpl2= new RunnableImpl2();
+        Thread t2 = new Thread(runnableImpl2);
+        t2.start();
+
         for (int i = 0; i < 20; i++) {
             System.out.println(Thread.currentThread().getName()+i);
         }
