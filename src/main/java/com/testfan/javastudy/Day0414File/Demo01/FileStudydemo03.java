@@ -6,7 +6,7 @@ import java.io.File;
 /**
  * @author 孙珑瑜
  * @version 20210414
- * 构造方法
+ * 常用方法：获取功能的方法
  */
 public class FileStudydemo03 {
     public static void main(String[] args) {
