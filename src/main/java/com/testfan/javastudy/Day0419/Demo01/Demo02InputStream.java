@@ -1,4 +1,4 @@
-package com.testfan.javastudy.Day0419.Demo02;
+package com.testfan.javastudy.Day0419.Demo01;
 
 import org.apache.xpath.operations.String;
 
@@ -11,7 +11,7 @@ import java.util.Arrays;
  * @author 孙珑瑜
  * @version 20210419
  */
-public class Demo01InputStream {
+public class Demo02InputStream {
 //    public static void main(String[] args) throws IOException {
 //        FileInputStream fis = new FileInputStream("D:\\code\\slycode\\maven_project\\src\\main\\java\\com\\testfan\\javastudy\\Day0419\\Demo01\\1.txt");
 //        //使用FileInputStream对象中的方法read读取文件
