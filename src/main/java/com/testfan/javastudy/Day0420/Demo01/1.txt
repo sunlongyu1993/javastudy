@@ -1,1 +1,6 @@
-100ABCDEBC你好周一不开心###$$$
+#save data
+#Wed Apr 21 13:57:01 CST 2021
+sly4=21
+sly3=20
+sly2=19
+#sly1=18

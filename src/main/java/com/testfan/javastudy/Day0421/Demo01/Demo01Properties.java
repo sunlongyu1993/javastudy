@@ -6,6 +6,7 @@ import java.util.Set;
 /**
  * @author 孙珑瑜
  * @version 20210421
+ * Properties 集合存储以及遍历数据
  */
 public class Demo01Properties {
     public static void main(String[] args) {
