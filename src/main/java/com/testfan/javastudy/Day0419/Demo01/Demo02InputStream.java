@@ -13,7 +13,7 @@ import java.util.Arrays;
  */
 public class Demo02InputStream {
 //    public static void main(String[] args) throws IOException {
-//        FileInputStream fis = new FileInputStream("D:\\code\\slycode\\maven_project\\src\\main\\java\\com\\testfan\\javastudy\\Day0419\\Demo01\\1.txt");
+//        FileInputStream fis = new FileInputStream("D:\\code\\slycode\\maven_project\\src\\main\\java\\com\\testfan\\javastudy\\Day0419\\Demo01BufferedWriter\\1.txt");
 //        //使用FileInputStream对象中的方法read读取文件
 //        // int read(byte[] b)从输入流中读取一定量的字节，将其存储到缓冲区数组b 中
 ////        byte[] b = new byte[3];
@@ -37,7 +37,7 @@ public class Demo02InputStream {
 //        fis.close();//释放资源
 //    }
 public static void main(String[] args) throws IOException {
-            FileInputStream fis = new FileInputStream("D:\\code\\slycode\\maven_project\\src\\main\\java\\com\\testfan\\javastudy\\Day0419\\Demo01\\1.txt");
+            FileInputStream fis = new FileInputStream("D:\\code\\slycode\\maven_project\\src\\main\\java\\com\\testfan\\javastudy\\Day0419\\Demo01BufferedWriter\\1.txt");
             byte[] bytes = new byte[1024];//存储读取到的多个字节
             int len = 0;//记录每次读取到的字节个数
             while ((len = fis.read(bytes))!=-1){

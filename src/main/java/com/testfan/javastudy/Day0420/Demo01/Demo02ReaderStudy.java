@@ -12,7 +12,7 @@ import java.io.IOException;
  */
 public class Demo02ReaderStudy {
     public static void main(String[] args) throws IOException {
-        FileReader fr = new FileReader("D:\\code\\slycode\\maven_project\\src\\main\\java\\com\\testfan\\javastudy\\Day0420\\Demo01\\1.txt");
+        FileReader fr = new FileReader("D:\\code\\slycode\\maven_project\\src\\main\\java\\com\\testfan\\javastudy\\Day0420\\Demo01BufferedWriter\\1.txt");
         char[] chars = new char[1024];
         int len =0;
         while ((len =fr.read(chars))!=-1){

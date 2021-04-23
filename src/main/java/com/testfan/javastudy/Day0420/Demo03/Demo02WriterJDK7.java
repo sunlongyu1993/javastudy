@@ -20,7 +20,7 @@ import java.io.IOException;
 public class Demo02WriterJDK7 {
     public static void main(String[] args) {
         try(    //第一步：创建一个字节输入流对象FileInputStream，构造方法中绑定要读取的数据源
-                FileInputStream fis = new FileInputStream("D:\\code\\slycode\\maven_project\\src\\main\\java\\com\\testfan\\javastudy\\Day0419\\Demo01\\1.jpg");//需要读取的数据源
+                FileInputStream fis = new FileInputStream("D:\\code\\slycode\\maven_project\\src\\main\\java\\com\\testfan\\javastudy\\Day0419\\Demo01BufferedWriter\\1.jpg");//需要读取的数据源
                 //创建一个字节输出流对象FileOutputStream，构造方法中绑定要写入的目的地
                 FileOutputStream fos = new FileOutputStream("D:\\code\\slycode\\maven_project\\src\\main\\java\\com\\testfan\\javastudy\\Day0420\\Demo03\\1.jpg");//需要写入的目的地
                 )

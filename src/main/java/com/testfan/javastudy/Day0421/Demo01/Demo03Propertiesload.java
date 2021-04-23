@@ -15,7 +15,7 @@ import java.util.Set;
 public class Demo03Propertiesload {
     public static void main(String[] args) throws Exception {
         Properties pros = new Properties();
-        FileReader fr = new FileReader("D:\\code\\slycode\\maven_project\\src\\main\\java\\com\\testfan\\javastudy\\Day0420\\Demo01\\1.txt");
+        FileReader fr = new FileReader("D:\\code\\slycode\\maven_project\\src\\main\\java\\com\\testfan\\javastudy\\Day0420\\Demo01BufferedWriter\\1.txt");
         pros.load(fr);
         Set<String> sets = pros.stringPropertyNames();
         for (String key : sets) {

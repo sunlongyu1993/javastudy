@@ -17,8 +17,8 @@ public class FileStudydemo05 {
 
     }
     private static void show01(){
-        File file1 = new File("D:\\code\\slycode\\maven_project\\src\\main\\java\\com\\testfan\\javastudy\\Day0414File\\Demo01\\b.txt");
-        File file2 = new File("Day0414File\\Demo01\\b1.txt");
+        File file1 = new File("D:\\code\\slycode\\maven_project\\src\\main\\java\\com\\testfan\\javastudy\\Day0414File\\Demo01BufferedWriter\\b.txt");
+        File file2 = new File("Day0414File\\Demo01BufferedWriter\\b1.txt");
         try {
             System.out.println(file1.createNewFile());
             System.out.println(file2.createNewFile());

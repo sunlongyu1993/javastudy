@@ -12,7 +12,7 @@ import java.util.Arrays;
 public class OutputStreamDemo03 {
     public static void main(String[] args) throws IOException {
         // true :追加开关
-        FileOutputStream fos = new FileOutputStream("D:\\code\\slycode\\maven_project\\src\\main\\java\\com\\testfan\\javastudy\\Day0417\\Demo01\\1.txt", true);
+        FileOutputStream fos = new FileOutputStream("D:\\code\\slycode\\maven_project\\src\\main\\java\\com\\testfan\\javastudy\\Day0417\\Demo01BufferedWriter\\1.txt", true);
         fos.write("你好周一".getBytes());
         for (int i = 1; i < 10; i++) {
             fos.write("不开心".getBytes());

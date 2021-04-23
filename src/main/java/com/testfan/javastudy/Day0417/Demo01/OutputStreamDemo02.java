@@ -12,7 +12,7 @@ import java.util.Arrays;
  */
 public class OutputStreamDemo02 {
     public static void main(String[] args) throws IOException {
-        FileOutputStream fos = new FileOutputStream("D:\\code\\slycode\\maven_project\\src\\main\\java\\com\\testfan\\javastudy\\Day0417\\Demo01\\1.txt");
+        FileOutputStream fos = new FileOutputStream("D:\\code\\slycode\\maven_project\\src\\main\\java\\com\\testfan\\javastudy\\Day0417\\Demo01BufferedWriter\\1.txt");
         fos.write(49);//在文件中写入100这个数子，需要3个字节
         fos.write(48);
         fos.write(48);
