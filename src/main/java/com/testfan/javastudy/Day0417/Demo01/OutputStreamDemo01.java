@@ -12,7 +12,7 @@ import java.io.IOException;
 public class OutputStreamDemo01 {
     public static void main(String[] args)  {
         try {
-            FileOutputStream fos = new FileOutputStream("D:\\code\\slycode\\maven_project\\src\\main\\java\\com\\testfan\\javastudy\\Day0416\\Demo02\\1.txt");
+            FileOutputStream fos = new FileOutputStream("D:\\code\\slycode\\maven_project\\src\\main\\java\\com\\testfan\\javastudy\\Day0416\\Demo02BufferedReader\\1.txt");
             fos.write(97);
             fos.close();
         } catch (IOException e) {

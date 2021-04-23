@@ -10,7 +10,7 @@ import java.io.IOException;
  */
 public class Demo01WriterStudy {
     public static void main(String[] args) throws Exception {
-        FileWriter fw = new FileWriter("D:\\code\\slycode\\maven_project\\src\\main\\java\\com\\testfan\\javastudy\\Day0420\\Demo02\\1.txt");
+        FileWriter fw = new FileWriter("D:\\code\\slycode\\maven_project\\src\\main\\java\\com\\testfan\\javastudy\\Day0420\\Demo02BufferedReader\\1.txt");
         fw.write(97);
         fw.flush();
         fw.close();

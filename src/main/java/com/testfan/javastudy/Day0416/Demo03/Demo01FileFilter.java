@@ -9,7 +9,7 @@ import java.io.File;
  */
 public class Demo01FileFilter {
     public static void main(String[] args) {
-        File file = new File("D:\\code\\slycode\\maven_project\\src\\main\\java\\com\\testfan\\javastudy\\Day0416\\Demo02");
+        File file = new File("D:\\code\\slycode\\maven_project\\src\\main\\java\\com\\testfan\\javastudy\\Day0416\\Demo02BufferedReader");
         getAllFile(file);
     }
 

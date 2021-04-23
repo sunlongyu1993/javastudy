@@ -7,7 +7,7 @@ import java.io.*;
  * @version 20210419
  * 字符缓冲输入流
  */
-public class Demo02 {
+public class Demo02BufferedReader {
     public static void main(String[] args) throws IOException {
         //第一步：创建一个字符输入流FileReader，构造方法中绑定要读取的目标文件
         FileReader fr = new FileReader("D:\\code\\slycode\\maven_project\\src\\main\\java\\com\\testfan\\javastudy\\file\\1.txt");

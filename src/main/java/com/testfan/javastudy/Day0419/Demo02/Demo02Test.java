@@ -15,7 +15,7 @@ public class Demo02Test {
         //第一步：创建一个字节输入流对象FileInputStream，构造方法中绑定要读取的数据源
         FileInputStream fis = new FileInputStream("D:\\code\\slycode\\maven_project\\src\\main\\java\\com\\testfan\\javastudy\\Day0419\\Demo01BufferedWriter\\1.jpg");//需要读取的数据源
         //创建一个字节输出流对象FileOutputStream，构造方法中绑定要写入的目的地
-        FileOutputStream fos = new FileOutputStream("D:\\code\\slycode\\maven_project\\src\\main\\java\\com\\testfan\\javastudy\\Day0419\\Demo02\\1.jpg");//需要写入的目的地
+        FileOutputStream fos = new FileOutputStream("D:\\code\\slycode\\maven_project\\src\\main\\java\\com\\testfan\\javastudy\\Day0419\\Demo02BufferedReader\\1.jpg");//需要写入的目的地
 
         //第二步：使用数组缓冲读取多个字节，写入多个字节
         byte[] bytes = new byte[1024];
