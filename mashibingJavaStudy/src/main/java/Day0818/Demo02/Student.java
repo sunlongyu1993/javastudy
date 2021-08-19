@@ -26,4 +26,5 @@ public class Student extends Person implements TestInterface{
         System.out.println("先继承再实现btest");
 
     }
+
 }

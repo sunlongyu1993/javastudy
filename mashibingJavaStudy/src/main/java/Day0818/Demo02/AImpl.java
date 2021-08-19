@@ -27,4 +27,9 @@ public class AImpl implements TestInterface,TestInterfaceb{
     public void dtest(Double dd) {
         System.out.println("实现接口A中的抽象方法dtest");
     }
+
+    @Override
+    public void etest() {
+        System.out.println("重写接口中的非抽象方法-default方法");
+    }
 }

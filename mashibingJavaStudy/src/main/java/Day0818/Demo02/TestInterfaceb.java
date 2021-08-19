@@ -10,4 +10,8 @@ public interface TestInterfaceb {
     //抽象方法
     public abstract void ctest(String name);
     public abstract void dtest(Double dd);
+    public default void etest(){
+        System.out.println("接口中的default方法");
+    }
+
 }
