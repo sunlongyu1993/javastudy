@@ -24,6 +24,6 @@ public class FruitPizz extends Pizz{
 
     @Override
     public String getAll() {
-        return "披萨的名字："+getName()+",披萨的尺寸："+getSize()+",披萨的价格："+getPrice()+",披萨的克数："+burdening;
+        return super.getAll()+"\n种类是："+getBurdening();
     }
 }

@@ -46,6 +46,6 @@ public class Pizz {
         this.price = price;
     }
     public  String getAll(){
-        return "披萨的名字："+getName()+",披萨的尺寸："+getSize()+",披萨的价格："+getPrice();
+        return "披萨的名字："+getName()+"\n披萨的尺寸："+getSize()+"寸\n披萨的价格："+getPrice();
     }
 }
