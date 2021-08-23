@@ -11,8 +11,6 @@ public class Pizz {
     private int size;//尺寸
     private double price;//价格
     //方法
-
-
     public String getName() {
         return name;
     }
@@ -45,7 +43,8 @@ public class Pizz {
         this.size = size;
         this.price = price;
     }
-    public  String getAll(){
-        return "披萨的名字："+getName()+"\n披萨的尺寸："+getSize()+"寸\n披萨的价格："+getPrice();
+
+    public String getAll() {
+        return "披萨的名字：" + getName() + "\n披萨的尺寸：" + getSize() + "寸\n披萨的价格：" + getPrice();
     }
 }
