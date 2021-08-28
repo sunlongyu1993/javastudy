@@ -72,4 +72,7 @@ public class DrinkClass {
     public void setRemark(String remark) {
         this.remark = remark;
     }
+    public String orderInfo(){
+        return "您购买了"+getName()+":"+getName()+","+getAddice()+",购买的"+getSize()+",购买的数量"+getNum()+"购买的价格"+getPrice();
+    }
 }
