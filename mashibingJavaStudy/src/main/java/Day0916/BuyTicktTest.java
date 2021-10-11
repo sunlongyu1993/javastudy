@@ -3,10 +3,10 @@ package Day0916;
 /**
  * @author 孙珑瑜
  * @version 210916
- * 买火车票
+ * 买火车票的线程
  */
 public class BuyTicktTest extends Thread{
-    //线程的名字作为窗口的名字，直接打印
+    //带参的构造器，线程的名字作为窗口的名字，直接打印
     public BuyTicktTest(String name){
         super(name); //调用父类的构造器，将名字传入，可以设置线程的名字
     }

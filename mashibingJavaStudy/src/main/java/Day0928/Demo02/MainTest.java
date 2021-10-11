@@ -1,8 +1,8 @@
-package Day0928;
+package Day0928.Demo02;
 
 /**
  * @author 孙珑瑜
- * @version 210929
+ * @version 211011
  */
 public class MainTest {
     public static void main(String[] args) {
