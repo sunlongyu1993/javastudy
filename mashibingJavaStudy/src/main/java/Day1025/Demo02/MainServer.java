@@ -10,31 +10,67 @@ import java.net.Socket;
  * 服务端
  */
 public class MainServer {
-    public static void main(String[] args) throws IOException, ClassNotFoundException {
-        ServerSocket ss = new ServerSocket(8888);//1、创建套接字
+    public static void main(String[] args)  {
+        ServerSocket ss = null;//1、创建套接字
+        Socket s =null;
+        InputStream is  =null;
+        ObjectInputStream ois =null;
+        OutputStream os = null;
+        DataOutputStream dos = null;
+        try {
+            ss = new ServerSocket(8888);
+            s = ss.accept();//阻塞流程，等待接收客户端的数据
+            is = s.getInputStream();//输入流，接受客户端数据
+            ois = new ObjectInputStream(is);
 
-        Socket s = ss.accept();//阻塞流程，等待接收客户端的数据
-        InputStream is = s.getInputStream();//输入流，接受客户端数据
-        ObjectInputStream ois = new ObjectInputStream(is);
+            //读取客户端传入的数据
+            UserInformation user = (UserInformation) ois.readObject();
+            //校验客户端传入的用户名以及密码
+            Boolean flag = false;
+            if(user.getName().equals("sly")&& user.getPwd().equals("123123")){
+                flag =true;
+            }
+            //向客户端发送数据
+            os = s.getOutputStream();
+            dos = new DataOutputStream(os);
+            dos.writeBoolean(flag);
 
-        //读取客户端传入的数据
-        UserInformation user = (UserInformation) ois.readObject();
-        //校验客户端传入的用户名以及密码
-        Boolean flag = false;
-        if(user.getName().equals("sly")&& user.getPwd().equals("123123")){
-            flag =true;
+        } catch (IOException | ClassNotFoundException e) {
+            e.printStackTrace();
         }
-        //向客户端发送数据
-        OutputStream os = s.getOutputStream();
-        DataOutputStream dos = new DataOutputStream(os);
-        dos.writeBoolean(flag);
+        finally {
+            //关闭资源
+            try {
+                dos.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            try {
+                os.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            try {
+                ois.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            try {
+                is.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            try {
+                s.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            try {
+                ss.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
 
-        //关闭资源
-        dos.close();
-        os.close();
-        ois.close();
-        is.close();
-        s.close();
-        ss.close();
     }
 }
