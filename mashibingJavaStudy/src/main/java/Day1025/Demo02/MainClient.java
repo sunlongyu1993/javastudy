@@ -17,7 +17,7 @@ public class MainClient {
         InputStream is = null;
         DataInputStream dis = null;
         try {
-            s = new Socket("10.18.224.143",8888);
+            s = new Socket("",9999);
             //用户名+密码
             Scanner sc = new Scanner(System.in);
             System.out.println("请输入用户名");
@@ -72,9 +72,5 @@ public class MainClient {
                 e.printStackTrace();
             }
         }
-
-
-
-
     }
 }
