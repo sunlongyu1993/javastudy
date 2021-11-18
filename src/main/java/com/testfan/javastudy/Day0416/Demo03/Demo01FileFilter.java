@@ -10,6 +10,8 @@ import java.io.File;
 public class Demo01FileFilter {
     public static void main(String[] args) {
         File file = new File("D:\\code\\slycode\\maven_project\\src\\main\\java\\com\\testfan\\javastudy\\Day0416\\Demo02BufferedReader");
+        //File.separator 根据系统来判断拼接符
+        File file2 = new File("D:"+File.separator+"code\\slycode\\maven_project\\src\\main\\java\\com\\testfan\\javastudy\\Day0416\\Demo02BufferedReader");
         getAllFile(file);
     }
 
