@@ -22,7 +22,7 @@ public class Student extends Person implements MyInterface {
     protected int getSno(){
         return sno;
     }
-    private void work(){
+    private void work(int a){
         System.out.println("Student-----private权限修饰符方法work");
     }
     void happy(){
@@ -51,7 +51,7 @@ public class Student extends Person implements MyInterface {
 
     @Override
     @MyAnnotation(value = "OverrideMethod")
-    public void Method() {
+    public void MyMethod(int a)throws RuntimeException {
         System.out.println("重新了MyInterface接口中的Method的方法");
     }
 

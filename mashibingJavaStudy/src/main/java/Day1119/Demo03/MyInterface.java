@@ -6,5 +6,5 @@ package Day1119.Demo03;
  * 自定义的接口
  */
 public interface MyInterface {
-    void Method();
+    void MyMethod(int a);
 }
