@@ -27,8 +27,14 @@ public class GetConstractTest {
         Constructor<Student> con4 = cls1.getDeclaredConstructor(int.class);
         System.out.println(con4);
 
+        System.out.println("有了构造器以后我就可以创建对象：===================");
+        System.out.println("无参构造器");
         Student stu1 = con3.newInstance();
         System.out.println(stu1);
+
+        System.out.println("有参构造器");
+        Constructor<Student> con5 = cls1.getConstructor(double.class,double.class);//创建有参构造器
+//        Student stu2 = con5.newInstance(180.0, 80.0);//创建实例
 
         //私有构造器的
 //        Student stu2 = con4.newInstance(2);

@@ -1,5 +1,7 @@
 package Day1119.Demo03;
 
+import java.lang.annotation.Annotation;
+import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 
@@ -9,7 +11,7 @@ import java.lang.reflect.Modifier;
  * 反射-获取方法以及调用方法
  */
 public class GetMethodTest {
-    public static void main(String[] args) throws NoSuchMethodException {
+    public static void main(String[] args) throws NoSuchMethodException, IllegalAccessException, InstantiationException, InvocationTargetException {
         Class<Student> cls = Student.class;
         System.out.println("获取方法");
         System.out.println("getMethods:获取运行时类的方法还有所有父类中的方法（被public修饰）");
@@ -41,8 +43,20 @@ public class GetMethodTest {
         for (Class<?> parameterType : parameterTypes) {
             System.out.println(parameterType);
         }
+        System.out.println("getAnnotations：获取方法的注解：=============");
+        Annotation[] annotations = myMethod.getAnnotations();
+        for (Annotation annotation : annotations) {
+            System.out.println(annotation);
+        }
+        System.out.println("getExceptionTypes：获取方法的异常：=============");
+        Class<?>[] exceptionTypes = myMethod.getExceptionTypes();
+        for (Class<?> exceptionType : exceptionTypes) {
+            System.out.println(exceptionType);
+        }
 
-
-        System.out.println("调用方法");
+        System.out.println("调用方法——先有对象，");
+        Object stu2 = cls.newInstance();
+        myMethod.invoke(stu2,3);//调用stu2对象的myMethod方法(带参数)
+//        myMethod.invoke(stu2);//调用stu2对象的myMethod方法(无参数)
     }
 }

@@ -32,7 +32,7 @@ public class Student extends Person implements MyInterface {
 
     //构造器
     public Student() {
-        System.out.println("空构造器");
+//        System.out.println("空构造器");
     }
     public Student(double height, double weight) {
         this.height =height;
@@ -52,7 +52,7 @@ public class Student extends Person implements MyInterface {
     @Override
     @MyAnnotation(value = "OverrideMethod")
     public void MyMethod(int a)throws RuntimeException {
-        System.out.println("重新了MyInterface接口中的Method的方法");
+        System.out.println("重写了MyInterface接口中的Method的方法");
     }
 
     @Override
