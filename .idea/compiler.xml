@@ -6,10 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="Leecode" />
         <module name="mashibingJavaStudy" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="Leecode" target="1.8" />
       <module name="mashibingJavaStudy" target="1.8" />
       <module name="maven_project" target="1.8" />
     </bytecodeTargetLevel>
