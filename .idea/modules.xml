@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/JDBC-demo/JDBC-demo.iml" filepath="$PROJECT_DIR$/JDBC-demo/JDBC-demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/Leecode/Leecode.iml" filepath="$PROJECT_DIR$/Leecode/Leecode.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MyBatisStudy/MyBatisStudy.iml" filepath="$PROJECT_DIR$/MyBatisStudy/MyBatisStudy.iml" />
       <module fileurl="file://$PROJECT_DIR$/mashibingJavaStudy/mashibingJavaStudy.iml" filepath="$PROJECT_DIR$/mashibingJavaStudy/mashibingJavaStudy.iml" />
       <module fileurl="file://$PROJECT_DIR$/maven_project.iml" filepath="$PROJECT_DIR$/maven_project.iml" />
     </modules>

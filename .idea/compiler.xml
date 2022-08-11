@@ -6,14 +6,19 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="JDBC-demo" />
+        <module name="MyBatisStudy" />
         <module name="Leecode" />
         <module name="mashibingJavaStudy" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="JDBC-demo" target="1.8" />
       <module name="Leecode" target="1.8" />
+      <module name="logbackstudy" target="1.8" />
       <module name="mashibingJavaStudy" target="1.8" />
       <module name="maven_project" target="1.8" />
+      <module name="MyBatisStudy" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

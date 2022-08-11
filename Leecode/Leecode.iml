@@ -84,9 +84,6 @@
     <orderEntry type="library" name="Maven: io.qameta.allure:allure-java-commons:2.13.8" level="project" />
     <orderEntry type="library" name="Maven: io.qameta.allure:allure-model:2.13.8" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: org.jooq:joor-java-8:0.9.13" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Maven: org.testng:testng:6.14.3" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Maven: com.beust:jcommander:1.72" level="project" />
-    <orderEntry type="library" name="Maven: org.apache-extras.beanshell:bsh:2.0b6" level="project" />
     <orderEntry type="library" name="Maven: org.aspectj:aspectjweaver:1.8.10" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.uncommons:reportng:1.1.4" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: velocity:velocity:1.4" level="project" />
@@ -175,6 +172,7 @@
     <orderEntry type="library" name="Maven: xml-apis:xml-apis:1.4.01" level="project" />
     <orderEntry type="library" name="Maven: org.apache.jmeter:ApacheJMeter_functions:5.3" level="project" />
     <orderEntry type="library" name="Maven: org.apache.jmeter:ApacheJMeter_components:5.3" level="project" />
+    <orderEntry type="library" name="Maven: org.apache-extras.beanshell:bsh:2.0b6" level="project" />
     <orderEntry type="library" name="Maven: javax.mail:mail:1.5.0-b01" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: io.burt:jmespath-core:0.5.0" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: io.burt:jmespath-jackson:0.5.0" level="project" />
@@ -191,5 +189,9 @@
     <orderEntry type="library" scope="RUNTIME" name="Maven: com.sun.activation:javax.activation:1.2.0" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: org.apache.commons:commons-jexl:2.1.1" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: org.apache.commons:commons-jexl3:3.1" level="project" />
+    <orderEntry type="library" name="Maven: org.testng:testng:6.8.3" level="project" />
+    <orderEntry type="library" name="Maven: org.beanshell:bsh:2.0b4" level="project" />
+    <orderEntry type="library" name="Maven: com.beust:jcommander:1.27" level="project" />
+    <orderEntry type="library" name="Maven: org.yaml:snakeyaml:1.6" level="project" />
   </component>
 </module>
