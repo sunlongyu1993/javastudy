@@ -1,11 +1,11 @@
-package Test704;
+package LeetCodeDemo;
 
 /**
  * @author 孙珑瑜
  * @version 211202
  * 704 二分法
  */
-public class Demo01 {
+public class Demo02 {
     public static void main(String[] args) {
         int[] nums ={1,2,5,7,8,10};
         int index = getIndex1(nums, 10);

@@ -1,4 +1,7 @@
 <configuration>
+<!--    appender：追加器，日志以哪种方式输出-->
+<!--    name:起个名字-->
+<!--        class:不同实现类会输出到不同地方-->
 
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
         <!-- encoders are assigned the type
@@ -8,7 +11,10 @@
         </encoder>
     </appender>
 
-    <root level="debug">
+<!--    控制更细力度的日志级别-->
+    <logger name="cn.mapper" level="debug"></logger>
+    <root level="error"> <!--        控制所有的日志级别-->
+<!--        将当前日志输出到哪个追加器上-->
         <appender-ref ref="STDOUT" />
     </root>
 </configuration>

@@ -31,8 +31,9 @@ public class MyBatisTest {
         try (SqlSession session = sqlSessionFactory.openSession()) {
             UserMapper mapper = session.getMapper(UserMapper.class);
             User user = mapper.selectUserInfo(1001091);
-            //logger.info(user.toString());
-            //System.out.println(user);
+            logger.info("info:"+user.toString());
+            logger.debug("debug:"+user.toString());
+//            System.out.println(user);
         }catch (Exception e){
         //logger.error("日志输出错误信息");
         }

@@ -3,14 +3,24 @@
         PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
+    <properties resource="db.properties"></properties>
+<!--    environments：可以多个环境
+        default：默认的数据库环境-->
     <environments default="development">
+<!--        environment：配置数据库环境，id是指定当前数据库环境的的唯一标示-->
         <environment id="development">
+<!--        transactionManager：事物管理器类型：
+            type:=JDBC 使用jdbc的事物管理器
+                  =MANAGED 不运行事物-->
             <transactionManager type="JDBC"/>
+<!--        dataSource：数据源
+            type:POOLED 指定使用mybatis的连接池，一般不会使用mybatis自动的连接池的
+                ：UNPOOLED 不使用连接池-->
             <dataSource type="POOLED">
-                <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
-                <property name="url" value="jdbc:mysql://10.228.64.223:2399/zjy_test_240plus"/>
-                <property name="username" value="zjy_test_240plus"/>
-                <property name="password" value="552819ab22424c76"/>
+                <property name="driver" value="${mysql.driver}"/>
+                <property name="url" value="${mysql.url}"/>
+                <property name="username" value="${mysql.username}"/>
+                <property name="password" value="${mysql.password}"/>
             </dataSource>
         </environment>
     </environments>
